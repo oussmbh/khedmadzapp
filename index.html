@@ -5,34 +5,19 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>KhedmaDZ — كل الوظائف المحلية في مكان واحد</title>
   <meta name="description" content="KhedmaDZ يساعدك على نشر إعلانات العمل والوصول إلى مرشحين مناسبين بسرعة. حمّل التطبيق الآن." />
-
-  <!-- Google font -->
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-
-  <!-- JSON-LD organization -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Organization",
-    "name":"KhedmaDZ",
-    "url":"https://yourdomain.com",
-    "logo":"https://yourdomain.com/design.dz.png",
-    "contactPoint":[{"@type":"ContactPoint","email":"info@khedmadz.app.com","contactType":"customer service","areaServed":"DZ"}]
-  }
-  </script>
-
   <style>
     :root{
-      --accent:#f3c13a; /* الأصفر */
+      --accent:#f3c13a;
       --accent-2:#f6c94a;
       --bg:#fbfbfb;
       --muted:#7b7b7b;
       --card:#fff;
       --shadow: 0 12px 30px rgba(20,20,20,0.06);
       --max-width:1180px;
-      --container-pad:20px;
+      --container-pad:24px; /* زوّدنا الحشوة */
       --radius:14px;
-      font-size:16px;
+      --download-bar-height:72px; /* ارتفاع الشريط الأصفر */
     }
     *{box-sizing:border-box}
     html,body{height:100%}
@@ -47,106 +32,117 @@
       direction:rtl;
     }
     a{color:inherit;text-decoration:none}
+    /* زيادة الحشوة الجانبية للكونتينر لمنع التصاق المحتوى */
     .container{max-width:var(--max-width);margin:0 auto;padding:28px var(--container-pad);}
 
-/* HEADER */
-.header{
-  background:#fff;
-  border-bottom:1px solid rgba(0,0,0,0.04);
-  position:sticky;top:0;z-index:120;
-  backdrop-filter: blur(4px);
-}
-.header .inner{display:flex;align-items:center;justify-content:space-between;gap:12px}
-.brand{display:flex;align-items:center;gap:12px}
-.brand img{height:48px}
-.nav{display:flex;gap:18px}
-.nav a{padding:18px 6px;color:#222;font-weight:600;border-radius:8px}
-.nav a:hover{background:rgba(0,0,0,0.03)}
+    /* HEADER */
+    .header{
+      background:#fff;
+      border-bottom:1px solid rgba(0,0,0,0.04);
+      position:sticky;top:0;z-index:120;
+      backdrop-filter: blur(4px);
+    }
+    .header .inner{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand img{height:48px}
+    .nav{display:flex;gap:18px}
+    .nav a{padding:18px 6px;color:#222;font-weight:600;border-radius:8px}
+    .nav a:hover{background:rgba(0,0,0,0.03)}
 
-/* HERO */
-.hero{display:flex;gap:36px;align-items:center;padding:48px 0;min-height:64vh}
-@media (max-width:980px){.hero{flex-direction:column-reverse;padding:28px 0}}
-.hero-left{flex:1}
-.h1{font-size:36px;margin:0 0 12px;font-weight:800;letter-spacing:0.2px}
-.subtitle{color:var(--muted);margin-bottom:18px}
-.cta-row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
-.btn{
-  background:linear-gradient(90deg,var(--accent),var(--accent-2));
-  color:#111;padding:12px 18px;border-radius:12px;font-weight:800;box-shadow:0 10px 30px rgba(243,193,58,0.12);
-  display:inline-flex;align-items:center;gap:10px
-}
-.btn.secondary{background:transparent;border:1px solid rgba(0,0,0,0.06);font-weight:700;color:#333;padding:10px 14px}
-.small-meta{margin-top:10px;color:var(--muted);font-size:13px}
+    /* HERO */
+    .hero{display:flex;gap:36px;align-items:center;padding:48px 0;min-height:64vh}
+    @media (max-width:980px){.hero{flex-direction:column-reverse;padding:28px 0}}
+    .hero-left{flex:1}
+    .h1{font-size:36px;margin:0 0 12px;font-weight:800;letter-spacing:0.2px}
+    .subtitle{color:var(--muted);margin-bottom:18px}
+    .cta-row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+    .btn{
+      background:linear-gradient(90deg,var(--accent),var(--accent-2));
+      color:#111;padding:12px 18px;border-radius:12px;font-weight:800;box-shadow:0 10px 30px rgba(243,193,58,0.12);
+      display:inline-flex;align-items:center;gap:10px
+    }
+    .btn.secondary{background:transparent;border:1px solid rgba(0,0,0,0.06);font-weight:700;color:#333;padding:10px 14px}
+    .small-meta{margin-top:10px;color:var(--muted);font-size:13px}
 
-/* phone carousel */
-.hero-right{width:520px;display:flex;justify-content:center;align-items:center}
-@media(max-width:980px){.hero-right{width:100%}}
-.carousel{position:relative;width:320px;height:640px;display:flex;align-items:center;justify-content:center}
-@media(max-width:420px){.carousel{width:260px;height:520px}}
-.phone-frame{
-  width:100%;height:100%;border-radius:34px;background:#fff;box-shadow:var(--shadow);
-  display:flex;align-items:center;justify-content:center;padding:18px;transform-origin:center;transition:transform .6s cubic-bezier(.2,.9,.3,1);
-  position:absolute;
-}
-.phone-frame img{max-width:100%;height:auto;border-radius:16px;display:block}
-.carousel .p1{transform:translateX(0) scale(1);z-index:3}
-.carousel .p2{transform:translateX(-36px) translateY(18px) scale(.96);z-index:2;opacity:.95}
-.carousel .p3{transform:translateX(-72px) translateY(36px) scale(.92);z-index:1;opacity:.9}
+    /* phone carousel */
+    .hero-right{width:520px;display:flex;justify-content:center;align-items:center}
+    @media(max-width:980px){.hero-right{width:100%}}
+    .carousel{position:relative;width:320px;height:640px;display:flex;align-items:center;justify-content:center}
+    @media(max-width:420px){.carousel{width:260px;height:520px}}
+    .phone-frame{
+      width:100%;height:100%;border-radius:34px;background:#fff;box-shadow:var(--shadow);
+      display:flex;align-items:center;justify-content:center;padding:18px;transform-origin:center;transition:transform .6s cubic-bezier(.2,.9,.3,1);
+      position:absolute;
+    }
+    .phone-frame img{max-width:100%;height:auto;border-radius:16px;display:block}
+    .carousel .p1{transform:translateX(0) scale(1);z-index:3}
+    .carousel .p2{transform:translateX(-36px) translateY(18px) scale(.96);z-index:2;opacity:.95}
+    .carousel .p3{transform:translateX(-72px) translateY(36px) scale(.92);z-index:1;opacity:.9}
+    .carousel .navs{position:absolute;bottom:-36px;left:0;right:0;display:flex;justify-content:center;gap:8px}
+    .dot{width:10px;height:10px;border-radius:50%;background:rgba(0,0,0,0.12);display:inline-block}
+    .dot.active{background:var(--accent)}
 
-/* carousel controls */
-.carousel .navs{position:absolute;bottom:-36px;left:0;right:0;display:flex;justify-content:center;gap:8px}
-.dot{width:10px;height:10px;border-radius:50%;background:rgba(0,0,0,0.12);display:inline-block}
-.dot.active{background:var(--accent)}
+    /* features */
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:36px 0}
+    @media(max-width:980px){.features{grid-template-columns:1fr}}
+    .card{background:var(--card);padding:20px;border-radius:12px;box-shadow:var(--shadow);min-height:120px}
+    .card h3{margin:0 0 8px}
 
-/* features cards */
-.features{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:36px 0}
-@media(max-width:980px){.features{grid-template-columns:1fr}}
-.card{background:var(--card);padding:20px;border-radius:12px;box-shadow:var(--shadow);min-height:120px}
-.card h3{margin:0 0 8px}
+    /* employers */
+    .employers{padding:20px 0}
+    .employers .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    @media(max-width:980px){.employers .cards{grid-template-columns:1fr}}
 
-/* for employers */
-.employers{padding:20px 0}
-.employers .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-@media(max-width:980px){.employers .cards{grid-template-columns:1fr}}
+    /* blog */
+    .blog{background:linear-gradient(180deg,transparent,rgba(0,0,0,0.02));padding:36px;border-radius:12px;margin:36px 0;text-align:center}
+    .blog ul{list-style:none;padding:0;margin:12px 0 0}
+    .blog li{margin:8px 0;color:var(--muted)}
+    .blog a{color:var(--accent)}
 
-/* blog teaser */
-.blog{background:linear-gradient(180deg,transparent,rgba(0,0,0,0.02));padding:36px;border-radius:12px;margin:36px 0;text-align:center}
-.blog ul{list-style:none;padding:0;margin:12px 0 0}
-.blog li{margin:8px 0;color:var(--muted)}
-.blog a{color:var(--accent)}
+    /* sticky download bar on mobile */
+    .download-bar{
+      display:none;position:fixed;left:12px;right:12px;bottom:18px;margin:0 auto;max-width:420px;padding:12px;background:linear-gradient(90deg,var(--accent),var(--accent-2));border-radius:12px;box-shadow:0 14px 40px rgba(18,18,18,0.14);z-index:140;justify-content:center;align-items:center;gap:10px;
+      /* اضفنا safe-area */
+      padding-left:18px;padding-right:18px;
+    }
+    .download-bar .mini{font-weight:800;color:#111}
+    @media(max-width:780px){.download-bar{display:flex}}
 
-/* sticky download bar on mobile */
-.download-bar{
-  display:none;position:fixed;left:0;right:0;bottom:18px;margin:0 auto;max-width:420px;padding:12px;background:linear-gradient(90deg,var(--accent),var(--accent-2));border-radius:12px;box-shadow:0 14px 40px rgba(18,18,18,0.14);z-index:140;justify-content:center;align-items:center;gap:10px
-}
-.download-bar .mini{font-weight:800;color:#111}
-@media(max-width:780px){.download-bar{display:flex}}
+    /* footer */
+    .footer{padding:32px 0;border-top:1px solid rgba(0,0,0,0.04);background:#fff;margin-top:24px}
+    .footer .grid{display:flex;gap:20px;align-items:flex-start;justify-content:space-between}
+    @media(max-width:780px){.footer .grid{flex-direction:column;align-items:center;text-align:center}}
 
-/* footer */
-.footer{padding:32px 0;border-top:1px solid rgba(0,0,0,0.04);background:#fff;margin-top:24px}
-.footer .grid{display:flex;gap:20px;align-items:flex-start;justify-content:space-between}
-@media(max-width:780px){.footer .grid{flex-direction:column;align-items:center;text-align:center}}
+    .lead{color:var(--muted);margin-bottom:8px}
+    .badge{display:inline-block;background:rgba(0,0,0,0.03);padding:6px 10px;border-radius:999px;font-size:13px;margin-bottom:12px}
 
-/* small touches */
-.lead{color:var(--muted);margin-bottom:8px}
-.badge{display:inline-block;background:rgba(0,0,0,0.03);padding:6px 10px;border-radius:999px;font-size:13px;margin-bottom:12px}
+    /* modal */
+    .modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,0.45);display:flex;align-items:center;justify-content:center;z-index:200;padding:20px;display:none}
+    .modal{background:#fff;border-radius:12px;padding:20px;max-width:560px;width:100%;box-shadow:var(--shadow)}
+    .modal h3{margin-top:0}
+    .modal input, .modal textarea{width:100%;padding:12px;border-radius:8px;border:1px solid #eee}
 
-/* modal */
-.modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,0.45);display:flex;align-items:center;justify-content:center;z-index:200;padding:20px;display:none}
-.modal{background:#fff;border-radius:12px;padding:20px;max-width:560px;width:100%;box-shadow:var(--shadow)}
-.modal h3{margin-top:0}
-.modal .form-row{display:flex;gap:8px}
-.modal input, .modal textarea{width:100%;padding:12px;border-radius:8px;border:1px solid #eee}
+    /* small animations */
+    .fade-in{animation:fadeIn .8s both}
+    @keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
 
-/* small animations */
-.fade-in{animation:fadeIn .8s both}
-@keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+    /* utilities */
+    .center{text-align:center}
+    .muted{color:var(--muted)}
+    .small{font-size:13px;color:var(--muted)}
 
-/* utilities */
-.center{text-align:center}
-.muted{color:var(--muted)}
-.small{font-size:13px;color:var(--muted)}
+    /* ===== تعديلات خاصة لتفادي تغطية الشريط الأصفر ===== */
+    /* نضيف فسحة أسفل الـ main مساوية لارتفاع الشريط زائد هامش */
+    main{padding-bottom: calc(var(--download-bar-height) + 36px); /* يضمن ظهور المحتوى فوق الشريط */ }
+    /* ولفوتر أيضاً نضيف margin-bottom لتأكيد المسافة */
+    .footer{margin-bottom: calc(var(--download-bar-height) + 16px);}
 
+    /* على الهواتف نزيد padding للكونتينر لتجنب التصاق للنص */
+    @media (max-width:420px){
+      :root{--container-pad:18px}
+      .container{padding-left:18px;padding-right:18px}
+      .hero h1{font-size:24px}
+    }
   </style>
 </head>
 <body>
@@ -181,7 +177,11 @@
           <a class="btn secondary" id="open-contact" href="#" role="button">تواصل معنا</a>
         </div>
 
-        <p class="small-meta">متوفر على Google Play · للإتصال: <a href="mailto:contact@khedmadz.app.com">contact@khedmadz.app.com</a></p>
+        <p class="small-meta">متوفر على Google Play · للإتصال:
+          <a href="mailto:contact@khedmadz.app.com">contact@khedmadz.app.com</a> ·
+          <a href="mailto:support@khedmadz.app.com">support@khedmadz.app.com</a> ·
+          <a href="mailto:info@khedmadz.app.com">info@khedmadz.app.com</a>
+        </p>
 
         <!-- features inline -->
         <div style="margin-top:22px;display:flex;gap:12px;flex-wrap:wrap">
@@ -254,8 +254,11 @@
 
   <!-- sticky mobile download -->
   <div class="download-bar" id="download-bar" role="dialog" aria-label="تحميل التطبيق">
-    <div class="mini">حمّل تطبيق KhedmaDZ</div>
-    <a href="#" class="btn" style="padding:8px 12px">تحميل</a>
+    <div style="flex:1;display:flex;flex-direction:column;align-items:flex-start">
+      <div style="font-weight:800;color:#111">حمل تطبيق KhedmaDZ</div>
+      <div class="small muted" style="font-size:12px">ابحث عن موظفين أو اعثر على عمل الآن</div>
+    </div>
+    <a href="#" class="btn" style="padding:10px 14px">تحميل</a>
   </div>
 
   <!-- FOOTER -->
@@ -263,12 +266,22 @@
     <div class="container grid">
       <div>
         <h4>تواصل معنا</h4>
-        <p class="small muted">info@khedmadz.app.com · support@khedmadz.app.com · contact@khedmadz.app.com</p>
+        <p class="small muted">
+          <a href="mailto:info@khedmadz.app.com">info@khedmadz.app.com</a> ·
+          <a href="mailto:support@khedmadz.app.com">support@khedmadz.app.com</a> ·
+          <a href="mailto:contact@khedmadz.app.com">contact@khedmadz.app.com</a>
+        </p>
       </div>
+
       <div>
         <h4>تابعنا</h4>
-        <p class="small muted">Facebook · Instagram · TikTok</p>
+        <p class="small muted">
+          <a href="https://www.facebook.com/share/175tyBWDvn/" target="_blank" rel="noopener">Facebook</a> ·
+          <a href="https://www.instagram.com/khedma__dz?igsh=eTI5cHZ6dWFmMDhi" target="_blank" rel="noopener">Instagram</a> ·
+          <a href="https://www.tiktok.com/@khedma__dz?_r=1&_t=ZS-91qhSVc4nA1" target="_blank" rel="noopener">TikTok</a>
+        </p>
       </div>
+
       <div>
         <p class="small muted">&copy; KhedmaDZ 2025 — جميع الحقوق محفوظة</p>
       </div>
@@ -302,11 +315,7 @@
       let idx = 0;
       function show(i){
         idx = (i+frames.length)%frames.length;
-        frames.forEach((f, j) => {
-          f.classList.remove('p1','p2','p3');
-          // assign ordering p1 visible front, p2 middle, p3 back
-        });
-        // rotate order array
+        frames.forEach((f)=>f.classList.remove('p1','p2','p3'));
         const order = [];
         for(let k=0;k<frames.length;k++){
           order.push(frames[(idx+k)%frames.length]);
@@ -314,19 +323,11 @@
         order[0].classList.add('p1');
         order[1].classList.add('p2');
         order[2].classList.add('p3');
-
         dots.forEach(d=>d.classList.remove('active'));
         if(dots[idx]) dots[idx].classList.add('active');
       }
-      // init
       show(0);
-      // dots click
-      dots.forEach(d=>{
-        d.addEventListener('click', e=>{
-          show(parseInt(d.dataset.index));
-        });
-      });
-      // auto rotate
+      dots.forEach(d=>d.addEventListener('click', ()=> show(parseInt(d.dataset.index))));
       setInterval(()=>{ show(idx+1); }, 3500);
     })();
 
@@ -342,7 +343,6 @@
     function submitContact(e){
       e.preventDefault();
       const form = e.target;
-      const data = new FormData(form);
       // demo: show thanks and close
       alert('شكرًا! تلقينا رسالتك. سنرد عليك عبر البريد.');
       form.reset();
@@ -350,28 +350,27 @@
       return false;
     }
 
-    // mobile download bar show/hide on scroll
+    // mobile download bar behavior
     (function(){
       const bar = document.getElementById('download-bar');
-      let lastScroll = window.scrollY;
-      window.addEventListener('scroll', ()=>{
-        if(window.innerWidth <= 780){
-          const s = window.scrollY;
-          if(s > 200 && s > lastScroll) bar.style.transform='translateY(0)', bar.style.opacity='1';
-          else bar.style.transform='translateY(60px)', bar.style.opacity='0';
-          lastScroll = s;
-        }
-      });
+      // show on small screens after some scroll
+      if(window.innerWidth <= 780){
+        let shown = false;
+        window.addEventListener('scroll', ()=>{
+          if(window.scrollY > 220 && !shown){ bar.style.transform='translateY(0)'; bar.style.opacity='1'; shown = true; }
+          if(window.scrollY < 140 && shown){ bar.style.transform='translateY(60px)'; bar.style.opacity='0'; shown = false; }
+        });
+        // initial hidden position
+        bar.style.transform='translateY(60px)'; bar.style.opacity='0'; bar.style.transition='all .35s ease';
+      }
     })();
 
-    // CTA download (demo) - can open Play store link
+    // CTA download
     document.getElementById('download-btn').addEventListener('click', function(e){
       e.preventDefault();
-      // replace with real link, here we show modal subscribe as marketing hook
       const wants = confirm('هل تريد فتح صفحة تحميل التطبيق الآن؟ اضغط "موافق" للانتقال أو "إلغاء" للاشتراك في الإيميل.');
       if(wants){
-        // real link:
-        // window.location.href = 'https://play.google.com/store/apps/details?id=...';
+        // ضع هنا رابط Play الفعلي:
         window.location.href = '#'; // TODO: استبدل بـ رابط Google Play
       } else {
         modal.style.display='flex';
@@ -382,7 +381,6 @@
     document.addEventListener('keydown', e=>{
       if(e.key === 'Escape') closeModal();
     });
-
   </script>
 
 </body>
