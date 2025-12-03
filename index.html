@@ -13,9 +13,9 @@
   <div class="container">
 
     <!-- Header -->
-    <header class="site-header">
-      <div class="brand">
-        <img class="logo" src="design.dz.png" alt="KhedmaDZ">
+    <header class="site-header" role="banner">
+      <div class="brand" style="gap:12px">
+        <img class="logo" src="design.dz.png" alt="KhedmaDZ" style="height:56px">
         <div>
           <div class="title">KhedmaDZ</div>
           <div class="tag">Your opportunity starts here</div>
@@ -31,17 +31,21 @@
     </header>
 
     <!-- Hero -->
-    <section class="hero">
+    <section class="hero" aria-labelledby="hero-heading">
       <div class="hero-card">
-        <h1 class="h1">كل الوظائف المحلية في مكان واحد</h1>
+        <h1 id="hero-heading" class="h1">كل الوظائف المحلية في مكان واحد</h1>
         <p class="h2">انشر عرضك أو ابحث عن فرصة مناسبة حسب الولاية والمجال. سهولة في النشر وسرعة في العثور على المرشحين.</p>
-        <a class="cta" href="https://play.google.com/store/apps/details?id=com.khedmadz.app">تحميل التطبيق</a>
-        <div class="meta">
+
+        <div style="margin-top:12px">
+          <a class="cta" href="https://play.google.com/store/apps/details?id=com.khedmadz.app" target="_blank" rel="noopener">تحميل التطبيق</a>
+        </div>
+
+        <div class="meta" style="margin-top:14px">
           <span class="small">متوفر على Google Play</span> ·
           <span class="small">اتصل: <a href="mailto:contact@khedmadz.app.com">contact@khedmadz.app.com</a></span>
         </div>
 
-        <div class="features">
+        <div class="features" style="margin-top:18px">
           <div class="card">
             <h3>نشر سريع</h3>
             <p>أنشئ إعلان عمل خلال دقائق واستقبل الطلبات مباشرة.</p>
@@ -57,26 +61,41 @@
         </div>
 
         <!-- إعلان مقترح -->
-        <div class="ad-slot">مساحة إعلان AdSense — ضع الكود بعد قبول الموقع</div>
+        <div class="ad-slot" aria-hidden="true" style="margin-top:18px">
+          مساحـة إعلان AdSense — ضع الكود هنا بعد قبول الموقع
+        </div>
       </div>
 
-      <aside class="screenshots center">
-        <h3>نظرة داخل التطبيق</h3>
-        <!-- ارفع الصور ثم ضع الأسماء التالية في الريبو: s1.png , s2.png , s3.png -->
-        <img src="screenshot1.png">
-        <img src="screenshot2.png">
-        <img src="screenshot3.png">
+      <!-- Screenshots grid (حل 1 — ثلاثة صور أفقية) -->
+      <aside class="screenshots center" aria-label="App screenshots" style="padding-left:12px">
+        <h3 style="margin-bottom:8px">نظرة داخل التطبيق</h3>
 
+        <div class="app-screenshots-grid" style="display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin-top:12px">
+          <figure class="shot" style="width:260px;text-align:center">
+            <img src="screenshot1.png" alt="قائمة الوظائف — KhedmaDZ" style="width:100%;height:auto;border-radius:18px;box-shadow:0 18px 40px rgba(0,0,0,0.08)">
+            <figcaption style="margin-top:10px;font-size:14px;color:#777">قائمة الوظائف</figcaption>
+          </figure>
+
+          <figure class="shot" style="width:260px;text-align:center">
+            <img src="screenshot2.png" alt="الصفحة الرئيسية — KhedmaDZ" style="width:100%;height:auto;border-radius:18px;box-shadow:0 18px 40px rgba(0,0,0,0.08)">
+            <figcaption style="margin-top:10px;font-size:14px;color:#777">الصفحة الرئيسية</figcaption>
+          </figure>
+
+          <figure class="shot" style="width:260px;text-align:center">
+            <img src="screenshot3.png" alt="نشر إعلان — KhedmaDZ" style="width:100%;height:auto;border-radius:18px;box-shadow:0 18px 40px rgba(0,0,0,0.08)">
+            <figcaption style="margin-top:10px;font-size:14px;color:#777">نشر إعلان</figcaption>
+          </figure>
+        </div>
       </aside>
     </section>
 
     <!-- For Employers -->
-    <section class="section">
+    <section class="section" aria-labelledby="for-employers">
       <div class="container">
-        <h2 class="center">لأصحاب العمل</h2>
+        <h2 id="for-employers" class="center">لأصحاب العمل</h2>
         <p class="center small">نوفر لك أدوات سريعة لنشر عروضك والوصول لمرشحين حقيقيين.</p>
 
-        <div class="employer-boxes">
+        <div class="employer-boxes" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:14px">
           <div class="card">
             <h3>نشر فعال</h3>
             <p>إنشاء إعلان واضح مع متطلبات العمل والموقع.</p>
@@ -94,9 +113,9 @@
     </section>
 
     <!-- Blog + Resources -->
-    <section class="section">
+    <section class="section" aria-labelledby="blog">
       <div class="container">
-        <h2 class="center">مقالات ونصائح</h2>
+        <h2 id="blog" class="center">مقالات ونصائح</h2>
         <div class="blog-list center">
           <p class="small">مقالات قصيرة تساعدك على كتابة إعلان جيد وإيجاد الموظفين.</p>
           <ul style="list-style: none;padding:0;margin:12px 0;">
@@ -109,9 +128,9 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
       <div class="container">
-        <div class="row">
+        <div class="row" style="display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;align-items:center">
           <div class="contacts">
             <strong>تواصل معنا</strong><br>
             <a href="mailto:contact@khedmadz.app.com">contact@khedmadz.app.com</a> ·
@@ -121,9 +140,9 @@
 
           <div class="socials small">
             <strong>تابعنا</strong><br>
-            <a href="https://www.facebook.com/share/175tyBWDvn/" target="_blank">Facebook</a> ·
-            <a href="https://www.instagram.com/khedma__dz?igsh=eTI5cHZ6dWFmMDhi" target="_blank">Instagram</a> ·
-            <a href="https://www.tiktok.com/@khedma__dz?_r=1&_t=ZS-91qhSVc4nA1" target="_blank">TikTok</a>
+            <a href="https://www.facebook.com/share/175tyBWDvn/" target="_blank" rel="noopener">Facebook</a> ·
+            <a href="https://www.instagram.com/khedma__dz?igsh=eTI5cHZ6dWFmMDhi" target="_blank" rel="noopener">Instagram</a> ·
+            <a href="https://www.tiktok.com/@khedma__dz?_r=1&_t=ZS-91qhSVc4nA1" target="_blank" rel="noopener">TikTok</a>
           </div>
         </div>
 
@@ -132,5 +151,10 @@
     </footer>
 
   </div>
+
+  <!-- تحسين بسيط: رفع الظل عند المرور -->
+  <script>
+    // لا حاجة لسكريبت إضافي الآن؛ إن أردت carousel أو تأثيرات أكثر أخبرني
+  </script>
 </body>
 </html>
