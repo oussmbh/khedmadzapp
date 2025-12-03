@@ -1,156 +1,195 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>KhedmaDZ — تحميل التطبيق</title>
-  <meta name="description" content="تطبيق KhedmaDZ — ابحث عن وظائف وانشر عروض العمل بسهولة في الجزائر" />
-  <link rel="icon" href="design.dz.png" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KhedmaDZ — تحميل التطبيق</title>
 
-  <!-- Optional AdSense script (web). Replace ca-pub-... with your AdSense client if you use AdSense on the site -->
-  <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_ADSENSE_CLIENT" crossorigin="anonymous"></script> -->
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-  <style>
-    :root{
-      --brand:#FFCC00;
-      --accent:#222;
-      --muted:#666;
-      --page-bg:#f6f7f9;
-      --card-bg:#fff;
-      --maxw:980px;
-      font-family: "Segoe UI", Tahoma, "Helvetica Neue", Arial, sans-serif;
-    }
-    *{box-sizing:border-box}
-    body{margin:0;background:var(--page-bg);color:var(--accent);-webkit-font-smoothing:antialiased}
-    .wrap{max-width:var(--maxw);margin:34px auto;padding:20px}
-    header{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
-    .logo{width:72px;height:72px;border-radius:16px;background:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(0,0,0,.08)}
-    .logo img{max-width:64px;max-height:64px}
-    .brand{flex:1;min-width:220px}
-    .brand h1{margin:0;font-size:22px}
-    .brand p{margin:6px 0 0;color:var(--muted)}
-    .hero{margin-top:20px;background:var(--card-bg);padding:28px;border-radius:12px;box-shadow:0 8px 30px rgba(8,12,20,.06)}
-    .hero-grid{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
-    .hero-left{flex:1;min-width:260px}
-    .hero-right{width:260px;min-width:200px}
-    .desc{color:var(--muted);margin-top:8px}
-    .cta{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap}
-    .btn{background:var(--brand);border:none;padding:12px 18px;border-radius:10px;font-weight:700;color:#000;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:8px;box-shadow:0 6px 14px rgba(255,204,0,.25)}
-    .btn.secondary{background:transparent;border:1px solid #eee;color:var(--accent);box-shadow:none}
-    .small{font-size:13px;color:var(--muted)}
-    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:20px}
-    .card{background:linear-gradient(180deg,#fff,#fff);padding:14px;border-radius:10px;box-shadow:0 6px 14px rgba(8,12,20,.04)}
-    .card h3{margin:0;font-size:16px}
-    .card p{color:var(--muted);font-size:13px;margin-top:6px}
-    .download-badges{display:flex;gap:8px;flex-wrap:wrap}
-    .download-badge{display:inline-block;padding:8px 12px;border-radius:8px;background:#000;color:#fff;font-weight:600;text-decoration:none}
-    .ad-slot{margin:18px 0;padding:12px;border-radius:10px;background:#fafafa;border:1px dashed #eee;text-align:center;color:var(--muted)}
-    footer{margin-top:26px;text-align:center;color:var(--muted);font-size:13px;padding-bottom:40px}
-    @media (max-width:800px){
-      .features{grid-template-columns:repeat(1,1fr)}
-      .hero-grid{flex-direction:column-reverse}
-      .hero-right{width:100%}
-    }
-    .socials{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
-    .socials a{display:inline-block;padding:8px 12px;border-radius:8px;background:#111;color:#fff;text-decoration:none}
-    .contact{margin-top:14px;color:var(--muted);font-size:14px}
-    .emails{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
-    .emails a{color:var(--brand);text-decoration:none;font-weight:600}
-  </style>
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            margin: 0;
+            background: #ffffff;
+            color: #222;
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 25px;
+        }
+
+        header img {
+            width: 55px;
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-top: 20px;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .description {
+            text-align: center;
+            margin: 10px 0 25px 0;
+            color: #555;
+        }
+
+        .download-btn {
+            background: #ffcc00;
+            border: none;
+            padding: 14px 24px;
+            font-size: 20px;
+            font-weight: 700;
+            border-radius: 12px;
+            cursor: pointer;
+            display: block;
+            margin: 15px auto;
+            transition: 0.3s;
+        }
+        .download-btn:hover {
+            background: #e6b800;
+        }
+
+        .emails {
+            text-align: center;
+            color: #444;
+            margin-top: 10px;
+        }
+
+        .ads-box {
+            background: #f6f6f6;
+            padding: 18px;
+            border-radius: 12px;
+            margin: 30px 0;
+            text-align: center;
+            font-size: 15px;
+            color: #777;
+        }
+
+        .features {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 25px;
+        }
+
+        .feature {
+            width: 250px;
+            padding: 20px;
+            border-radius: 12px;
+            background: #fafafa;
+            box-shadow: 0px 2px 10px #eee;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px 0;
+            color: #777;
+            margin-top: 30px;
+        }
+
+        .social-buttons button {
+            padding: 10px 20px;
+            margin: 5px;
+            background: #222;
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .social-buttons button:hover {
+            opacity: .8;
+        }
+
+        img.screenshot {
+            width: 100%;
+            max-width: 360px;
+            border-radius: 12px;
+            margin: 20px auto;
+            display: block;
+        }
+    </style>
 </head>
+
 <body>
-  <div class="wrap">
+
+<div class="container">
+
+    <!-- Header -->
     <header>
-      <div class="logo"><img src="design.dz.png" alt="KhedmaDZ logo"></div>
-      <div class="brand">
-        <h1>KhedmaDZ</h1>
-        <p>تطبيق للبحث عن فرص العمل ونشر الوظائف بسهولة في الجزائر</p>
-      </div>
-      <div style="text-align:right;">
-        <div class="small">FR • EN • العربية</div>
-      </div>
+        <h2 style="margin: 0;">KhedmaDZ</h2>
+        <img src="design.dz.png" alt="Logo">
     </header>
 
-    <main class="hero" role="main">
-      <div class="hero-grid">
-        <div class="hero-left">
-          <h2>حمل التطبيق وابدأ في نشر/البحث عن الوظائف</h2>
-          <p class="desc">KhedmaDZ يساعد أصحاب الأعمال على نشر عروض العمل ويخدم الباحثين عن وظائف بطريقة بسيطة وفعّالة.</p>
+    <h1>حمّل التطبيق وابدأ في نشر/البحث عن الوظائف بسهولة</h1>
+    <p class="description">
+        يساعد KhedmaDZ أصحاب الأعمال والباحثين عن العمل على التواصل بسهولة وبشكل فعّال.
+    </p>
 
-          <div class="cta">
-            <!-- ضع رابط متجر play الصحيح بدل PLAY_STORE_URL -->
-            <a class="btn" id="downloadBtn" href="PLAY_STORE_URL" target="_blank" rel="noopener">تحميل التطبيق</a>
-          </div>
+    <button class="download-btn" onclick="window.location.href='https://play.google.com/store/apps/details?id=com.khedmadz.app'">
+        تحميل التطبيق
+    </button>
 
-          <div class="download-badges small" style="margin-top:12px">
-            <div>Contact: 
-              <div class="emails">
-                <a href="mailto:contact@khedmadz.app.com">contact@khedmadz.app.com</a>
-                <a href="mailto:support@khedmadz.app.com">support@khedmadz.app.com</a>
-                <a href="mailto:info@khedmadz.app.com">info@khedmadz.app.com</a>
-              </div>
-            </div>
-          </div>
+    <p class="emails">
+        contact@khedmadz.app.com — support@khedmadz.app.com — info@khedmadz.app.com
+    </p>
 
-          <!-- AdSense (web) placeholder:
-               إذا تريد إعلانات على صفحة الويب ضع شفرة AdSense هنا (بعد تفعيل حساب AdSense).
-               AdMob خاص بالتطبيق (مذكور أسفل كتعليمات).
-          -->
-          <div class="ad-slot" aria-hidden="true">
-            إعلان ويب — مساحة بانر (ضع شفرة AdSense هنا). مثال: responsive أو 320×50.
-          </div>
+    <!-- Screenshot -->
+    <img class="screenshot" src="app-screenshot.png" alt="App screenshot">
 
-          <div class="features" style="margin-top:18px">
-            <div class="card">
-              <h3>نشر سريع</h3>
-              <p>انشر إعلان الوظيفة في دقائق وتصل إلى المرشحين بسرعة.</p>
-            </div>
-            <div class="card">
-              <h3>واجهة سهلة</h3>
-              <p>تصميم بسيط يسهّل إدخال البيانات وإدارة الإعلانات.</p>
-            </div>
-            <div class="card">
-              <h3>دعم محلي</h3>
-              <p>مصمم للسوق الجزائري مع دعم بالعربية والفرنسية والإنجليزية.</p>
-            </div>
-          </div>
+    <!-- Adsense Ad Box -->
+    <div class="ads-box">
+        مسـاحة إعلان Google AdSense  
+        <br> (ضع شفرة الإعلان هنا)
+    </div>
 
-          <div class="contact">
-            <div style="margin-top:8px">
-              تواصل معنا عبر الشبكات:
-              <div class="socials" style="margin-top:6px">
-                <a href="https://www.facebook.com/share/175tyBWDvn/" target="_blank" rel="noopener">Facebook</a>
-                <a href="https://www.instagram.com/khedma__dz?igsh=eTI5cHZ6dWFmMDhi" target="_blank" rel="noopener">Instagram</a>
-                <a href="https://www.tiktok.com/@khedma__dz?_r=1&_t=ZS-91qhSVc4nA1" target="_blank" rel="noopener">TikTok</a>
-              </div>
-            </div>
-          </div>
+    <!-- Features -->
+    <div class="features">
+        <div class="feature">
+            <h3>نشر سريع</h3>
+            انشر إعلان وظيفتك في دقائق واصل إلى المرشحين بسرعة.
         </div>
 
-        <div class="hero-right">
-          <!-- الصورة أو mockup للتطبيق -->
-          <img src="app.html" alt="App screenshot" style="width:100%;border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,.08)">
+        <div class="feature">
+            <h3>واجهة سهلة</h3>
+            تصميم بسيط يسهل إدخال البيانات وإدارة الإعلانات.
         </div>
-      </div>
 
-      <div class="ad-slot" style="margin-top:18px">
-        موضع إعلان آخر — ضع شفرة AdSense هنا لصفحة الويب. (أو عرض رسالة: "إعلان مؤقت").
-      </div>
-    </main>
+        <div class="feature">
+            <h3>دعم محلي</h3>
+            تصميم مخصص للسوق الجزائري مع دعم للعربية والفرنسية والإنجليزية.
+        </div>
+    </div>
+
+    <!-- Social Links -->
+    <h3 style="text-align:center; margin-top:35px;">تابعنا على وسائل التواصل:</h3>
+    <div class="social-buttons" style="text-align:center;">
+        <button onclick="window.location.href='https://www.facebook.com/share/175tyBWDvn/'">Facebook</button>
+        <button onclick="window.location.href='https://www.instagram.com/khedma__dz?igsh=eTI5cHZ6dWFmMDhi'">Instagram</button>
+        <button onclick="window.location.href='https://www.tiktok.com/@khedma__dz?_r=1&_t=ZS-91qhSVc4nA1'">TikTok</button>
+    </div>
 
     <footer>
-      © KhedmaDZ — جميع الحقوق محفوظة — <a href="https://khedmadzapp.com/">khedmadzapp.com</a>
+        جميع الحقوق محفوظة © KhedmaDZ  
+        <br>
+        khedmadzapp.com
     </footer>
-  </div>
 
-  <script>
-    // safety: replace PLAY_STORE_URL if still placeholder
-    (function(){
-      var btn = document.getElementById('downloadBtn');
-      if(btn.href === 'PLAY_STORE_URL'){
-        btn.href = 'https://play.google.com/store/search?q=KhedmaDZ&c=apps';
-      }
-    })();
-  </script>
+</div>
+
 </body>
 </html>
