@@ -4,10 +4,18 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>KhedmaDZ — وظائف محلية وسريعة</title>
+
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <!-- ضع هنا كود AdSense الخاص بك عندما تحصل عليه (داخل head) -->
-  <!-- مثال: <script data-ad-client="ca-pub-XXXXXXXXXXXX" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
+
+  <!-- =======  IMPORTANT: ضع هنا معرف الناشر الخاص بك من AdSense =======
+       مثال: ca-pub-1234567890123456
+       لا تضع هذا المعرف إلا بعد تسجيل الموقع في AdSense ونيل الموافقة.
+  -->
+  <script async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXX"
+    crossorigin="anonymous"></script>
+  <!-- ================================================================== -->
 </head>
 <body>
   <div class="container">
@@ -60,13 +68,27 @@
           </div>
         </div>
 
-        <!-- إعلان مقترح -->
-        <div class="ad-slot" aria-hidden="true" style="margin-top:18px">
-          مساحـة إعلان AdSense — ضع الكود هنا بعد قبول الموقع
+        <!-- ===== In-Article Ad (ضع هنا إعلان داخل المحتوى لربح أعلى) =====
+             بعد الموافقة على الموقع: 
+             - استبدل ca-pub-XXXXXXXXXXXX بمعرفك
+             - استبدل data-ad-slot برقم الوحدة التي تنشئها في AdSense
+        -->
+        <div style="margin:20px 0;">
+          <ins class="adsbygoogle"
+               style="display:block; text-align:center;"
+               data-ad-layout="in-article"
+               data-ad-format="fluid"
+               data-ad-client="ca-pub-XXXXXXXXXXXX"
+               data-ad-slot="1111111111"></ins>
+          <script>
+               (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
         </div>
+        <!-- ================================================================== -->
+
       </div>
 
-      <!-- Screenshots grid (حل 1 — ثلاثة صور أفقية) -->
+      <!-- Screenshots grid -->
       <aside class="screenshots center" aria-label="App screenshots" style="padding-left:12px">
         <h3 style="margin-bottom:8px">نظرة داخل التطبيق</h3>
 
@@ -112,6 +134,22 @@
       </div>
     </section>
 
+    <!-- ===== Multiplex / AutoRelaxed Ad (عرض شبكي) =====
+         نضع هذا الإعلان قبل قسم المقالات لربح أعلى على الديسكتوب.
+         استبدل client / slot بعد إنشاء الوحدة داخل AdSense.
+    -->
+    <div style="margin:36px auto; max-width:980px; text-align:center;">
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-format="autorelaxed"
+           data-ad-client="ca-pub-XXXXXXXXXXXX"
+           data-ad-slot="2222222222"></ins>
+      <script>
+           (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+    <!-- ================================================================== -->
+
     <!-- Blog + Resources -->
     <section class="section" aria-labelledby="blog">
       <div class="container">
@@ -152,9 +190,6 @@
 
   </div>
 
-  <!-- تحسين بسيط: رفع الظل عند المرور -->
-  <script>
-    // لا حاجة لسكريبت إضافي الآن؛ إن أردت carousel أو تأثيرات أكثر أخبرني
-  </script>
+  <!-- no additional JS required for ads beyond AdSense script in head -->
 </body>
 </html>
