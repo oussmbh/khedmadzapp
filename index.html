@@ -1,45 +1,21 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>KhedmaDZ — كل الوظائف المحلية في مكان واحد</title>
-  <meta name="description" content="KhedmaDZ: انشر عرضك أو ابحث عن فرصة مناسبة حسب الولاية والمجال. تطبيق بسيط وسريع للوصول إلى المرشحين.">
-  <!-- ضع كود تحقق Google هنا إن طُلِب -->
-  <!-- <meta name="google-site-verification" content="PASTE_VERIFICATION_CODE"> -->
+  <meta name="description" content="KhedmaDZ: انشر عرضك أو ابحث عن وظيفة حسب الولاية. تطبيق بسيط وسريع." />
 
-  <!-- Open Graph (اختياري لكنه مفيد) -->
-  <meta property="og:title" content="KhedmaDZ — وظائف محلية"/>
-  <meta property="og:description" content="ابحث عن وظائف محلية أو انشر عرضك بسرعة. تطبيق KhedmaDZ."/>
-  <meta property="og:type" content="website"/>
-  <link rel="stylesheet" href="style.css">
+  <!-- ضع كود التحقق من Google هنا إذا طُلب -->
+  <!-- <meta name="google-site-verification" content="PASTE_CODE_HERE"> -->
 
-  <!-- JSON-LD (مهم لثقة محركات البحث) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "KhedmaDZ",
-    "url": "https://yourdomain.com",
-    "logo": "https://yourdomain.com/design.dz.png",
-    "contactPoint": [
-      {
-        "@type": "ContactPoint",
-        "email": "info@khedmadz.app.com",
-        "contactType": "customer service",
-        "areaServed": "DZ",
-        "availableLanguage": ["Arabic","French","English"]
-      }
-    ]
-  }
-  </script>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Header / Nav -->
   <header class="site-header">
     <div class="container header-inner">
-      <a href="index.html" class="brand">
-        <img src="design.dz.png" alt="KhedmaDZ" style="height:48px;">
+      <a class="brand" href="index.html">
+        <img src="design.dz.png" alt="KhedmaDZ" class="logo">
       </a>
 
       <nav class="main-nav" aria-label="القائمة الرئيسية">
@@ -53,55 +29,71 @@
     </div>
   </header>
 
-  <!-- Hero -->
   <main>
+    <!-- HERO -->
     <section class="hero container">
-      <div class="hero-content">
+      <div class="hero-left">
         <h1>كل الوظائف المحلية في مكان واحد</h1>
-        <p>انشر عرضك أو ابحث عن فرصة مناسبة حسب الولاية والمجال — سهولة في النشر والوصول للمرشحين.</p>
-        <a class="btn-cta" href="app.html">تحميل التطبيق</a>
-        <p class="small-meta">متوفر على Google Play · للإتصال: <a href="mailto:contact@khedmadz.app.com">contact@khedmadz.app.com</a></p>
+        <p class="subtitle">انشر عرضك أو ابحث عن فرصة مناسبة حسب الولاية والمجال — سهولة في النشر والوصول للمرشحين.</p>
+
+        <div class="hero-cta">
+          <a class="btn-cta" href="app.html">تحميل التطبيق</a>
+          <p class="meta">متوفر على Google Play · للإتصال: <a href="mailto:contact@khedmadz.app.com">contact@khedmadz.app.com</a></p>
+        </div>
+
+        <div class="features-inline">
+          <div class="feature-box">
+            <h4>نشر سريع</h4>
+            <p>أنشئ إعلان خلال دقائق واستقبل الطلبات مباشرة.</p>
+          </div>
+          <div class="feature-box">
+            <h4>فلترة حسب الولاية</h4>
+            <p>ابحث حسب الولاية أو المدينة أو نوع العقد.</p>
+          </div>
+          <div class="feature-box">
+            <h4>تسويق محلي</h4>
+            <p>وصول للمرشحين داخل الولايات المحددة.</p>
+          </div>
+        </div>
       </div>
 
-      <div class="hero-gallery" aria-hidden="false">
-        <!-- استبدل أسماء الصور بالملفات عندك -->
-        <figure class="phone phone-1"><img src="screenshot1.png" alt="عرض داخل التطبيق 1"></figure>
-        <figure class="phone phone-2"><img src="screenshot2.png" alt="عرض داخل التطبيق 2"></figure>
-        <figure class="phone phone-3"><img src="screenshot3.png" alt="عرض داخل التطبيق 3"></figure>
+      <div class="hero-right">
+        <div class="phones">
+          <figure class="phone p1"><img src="screenshot1.png" alt="عرض التطبيق 1"></figure>
+          <figure class="phone p2"><img src="screenshot2.png" alt="عرض التطبيق 2"></figure>
+          <figure class="phone p3"><img src="screenshot3.png" alt="عرض التطبيق 3"></figure>
+        </div>
       </div>
     </section>
 
-    <!-- ميزات سريعة -->
-    <section class="features container">
-      <div class="feature">
-        <h3>نشر سريع</h3>
-        <p>أنشئ إعلان عمل خلال دقائق واستقبل الطلبات مباشرة.</p>
-      </div>
-      <div class="feature">
-        <h3>فلترة حسب الولاية</h3>
-        <p>ابحث حسب الولاية أو المدينة أو نوع العقد.</p>
-      </div>
-      <div class="feature">
-        <h3>تسويق محلي</h3>
-        <p>وصول للمرشحين داخل الولايات المحددة.</p>
-      </div>
-    </section>
-
-    <!-- قسم أصحاب العمل -->
+    <!-- For Employers -->
     <section class="for-employers container">
       <h2>لأصحاب العمل</h2>
-      <p>نوفر لك أدوات سريعة لنشر عروضك والوصول لمترشحين حقيقيين.</p>
+      <p class="lead">نوفر لك أدوات سريعة لنشر عروضك والوصول لمترشحين حقيقيين.</p>
+
       <div class="cards">
-        <article class="card"><h4>نشر فعال</h4><p>إنشاء إعلان واضح مع متطلبات العمل والموقع.</p></article>
-        <article class="card"><h4>تسويق محلي</h4><p>وصول للمرشحين داخل الولايات.</p></article>
-        <article class="card"><h4>متابعة الأداء</h4><p>عرض الطلبات وفرز المرشحين بسرعة.</p></article>
+        <article class="card">
+          <h3>نشر فعال</h3>
+          <p>إنشاء إعلان واضح مع متطلبات العمل والموقع.</p>
+        </article>
+
+        <article class="card">
+          <h3>تسويق محلي</h3>
+          <p>وصول للمرشحين داخل الولايات المحددة.</p>
+        </article>
+
+        <article class="card">
+          <h3>متابعة الأداء</h3>
+          <p>عرض الطلبات وفرز المرشحين بسرعة.</p>
+        </article>
       </div>
     </section>
 
-    <!-- مقالات مختصرة -->
+    <!-- Blog teaser -->
     <section class="blog-teaser container">
       <h2>مقالات ونصائح</h2>
       <p class="lead">مقالات قصيرة تساعدك على كتابة إعلان جيد وإيجاد الموظفين.</p>
+
       <ul class="teaser-list">
         <li><a href="article1.html">كيف تكتب سيرة ذاتية احترافية</a></li>
         <li><a href="article2.html">أفضل طرق البحث عن عمل في الجزائر</a></li>
@@ -109,42 +101,17 @@
       </ul>
     </section>
 
-    <!-- مكان إعلانات AdSense (بعد القبول) -->
+    <!-- Ads placeholder (ضع كود AdSense بعد القبول) -->
     <section class="ads container" aria-label="إعلانات">
-      <!-- ضع كود AdSense بعد قبول الحساب -->
-      <!-- مثال: إعلان عرضي responsive -->
-      <!-- <ins class="adsbygoogle"
-           style="display:block"
-           data-ad-client="ca-pub-XXXXXXXXXXXX"
-           data-ad-slot="YYYYYYYYYY"
-           data-ad-format="auto"
-           data-full-width-responsive="true"></ins>
-      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script> -->
+      <!-- ضع كود AdSense هنا بعد قبول حسابك -->
     </section>
-
   </main>
 
-  <!-- Footer -->
   <footer class="site-footer">
     <div class="container footer-grid">
-      <div class="col">
+      <div class="col contact-col">
         <h4>تواصل معنا</h4>
-        <p><a href="mailto:info@khedmadz.app.com">info@khedmadz.app.com</a> · <a href="mailto:support@khedmadz.app.com">support@khedmadz.app.com</a></p>
-        <p><a href="mailto:contact@khedmadz.app.com">contact@khedmadz.app.com</a></p>
-      </div>
-
-      <div class="col">
-        <h4>تابعنا</h4>
-        <p>Facebook · Instagram · TikTok</p>
-      </div>
-
-      <div class="col">
-        <p class="muted">&copy; KhedmaDZ 2025 — جميع الحقوق محفوظة</p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- بسيط لعرض السنة -->
-  <script>/* لا حاجة الآن */</script>
-</body>
-</html>
+        <p class="emails">
+          <a href="mailto:info@khedmadz.app.com">info@khedmadz.app.com</a><br>
+          <a href="mailto:support@khedmadz.app.com">support@khedmadz.app.com</a><br>
+          <a href="mailto:contact@khedmadz.app.com">contact@khedmadz.app.com</a>
