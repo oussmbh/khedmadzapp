@@ -5,17 +5,14 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>KhedmaDZ — تحميل التطبيق</title>
   <meta name="description" content="تطبيق KhedmaDZ — ابحث عن وظائف وانشر عروض العمل بسهولة في الجزائر" />
-  <!-- Replace with your favicon / logo -->
   <link rel="icon" href="design.dz.png" />
 
-  <!-- Google (AdSense) placeholder - replace YOUR_ADSENSE_CLIENT -->
-  <!-- NOTE: AdSense requires you to have an approved site/account. -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=YOUR_ADSENSE_CLIENT"
-          crossorigin="anonymous"></script>
+  <!-- Optional AdSense script (web). Replace ca-pub-... with your AdSense client if you use AdSense on the site -->
+  <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_ADSENSE_CLIENT" crossorigin="anonymous"></script> -->
 
   <style>
     :root{
-      --brand:#FFCC00;        /* KhedmaDZ yellow */
+      --brand:#FFCC00;
       --accent:#222;
       --muted:#666;
       --page-bg:#f6f7f9;
@@ -26,10 +23,10 @@
     *{box-sizing:border-box}
     body{margin:0;background:var(--page-bg);color:var(--accent);-webkit-font-smoothing:antialiased}
     .wrap{max-width:var(--maxw);margin:34px auto;padding:20px}
-    header{display:flex;align-items:center;gap:16px}
+    header{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
     .logo{width:72px;height:72px;border-radius:16px;background:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(0,0,0,.08)}
     .logo img{max-width:64px;max-height:64px}
-    .brand{flex:1}
+    .brand{flex:1;min-width:220px}
     .brand h1{margin:0;font-size:22px}
     .brand p{margin:6px 0 0;color:var(--muted)}
     .hero{margin-top:20px;background:var(--card-bg);padding:28px;border-radius:12px;box-shadow:0 8px 30px rgba(8,12,20,.06)}
@@ -47,21 +44,18 @@
     .card p{color:var(--muted);font-size:13px;margin-top:6px}
     .download-badges{display:flex;gap:8px;flex-wrap:wrap}
     .download-badge{display:inline-block;padding:8px 12px;border-radius:8px;background:#000;color:#fff;font-weight:600;text-decoration:none}
-    /* Ad placeholder */
     .ad-slot{margin:18px 0;padding:12px;border-radius:10px;background:#fafafa;border:1px dashed #eee;text-align:center;color:var(--muted)}
-    /* footer */
     footer{margin-top:26px;text-align:center;color:var(--muted);font-size:13px;padding-bottom:40px}
-    /* responsive */
     @media (max-width:800px){
       .features{grid-template-columns:repeat(1,1fr)}
       .hero-grid{flex-direction:column-reverse}
       .hero-right{width:100%}
     }
-    /* Social icons simple */
-    .socials{display:flex;gap:8px;margin-top:12px}
-    .socials a{display:inline-block;width:40px;height:40px;border-radius:8px;background:#111;color:#fff;display:flex;align-items:center;justify-content:center;text-decoration:none}
-    /* contact */
+    .socials{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
+    .socials a{display:inline-block;padding:8px 12px;border-radius:8px;background:#111;color:#fff;text-decoration:none}
     .contact{margin-top:14px;color:var(--muted);font-size:14px}
+    .emails{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+    .emails a{color:var(--brand);text-decoration:none;font-weight:600}
   </style>
 </head>
 <body>
@@ -73,8 +67,7 @@
         <p>تطبيق للبحث عن فرص العمل ونشر الوظائف بسهولة في الجزائر</p>
       </div>
       <div style="text-align:right;">
-        <!-- Language switch (visual) -->
-        <div class="small">العربية • FR • EN</div>
+        <div class="small">FR • EN • العربية</div>
       </div>
     </header>
 
@@ -85,32 +78,26 @@
           <p class="desc">KhedmaDZ يساعد أصحاب الأعمال على نشر عروض العمل ويخدم الباحثين عن وظائف بطريقة بسيطة وفعّالة.</p>
 
           <div class="cta">
-            <!-- Replace PLAY_STORE_URL with actual Play Store link -->
-            <a class="btn" id="downloadBtn" href="PLAY_STORE_URL" target="_blank" rel="noopener">
-              تحميل التطبيق
-            </a>
-
-            <a class="btn secondary" href="https://khedmadzapp.com/" target="_blank" rel="noopener">زيارة الموقع</a>
+            <!-- ضع رابط متجر play الصحيح بدل PLAY_STORE_URL -->
+            <a class="btn" id="downloadBtn" href="PLAY_STORE_URL" target="_blank" rel="noopener">تحميل التطبيق</a>
           </div>
 
           <div class="download-badges small" style="margin-top:12px">
-            <span>Contact: contact@khedmadz.app.com</span>
+            <div>Contact: 
+              <div class="emails">
+                <a href="mailto:contact@khedmadz.app.com">contact@khedmadz.app.com</a>
+                <a href="mailto:support@khedmadz.app.com">support@khedmadz.app.com</a>
+                <a href="mailto:info@khedmadz.app.com">info@khedmadz.app.com</a>
+              </div>
+            </div>
           </div>
 
-          <!-- AdSense responsive placeholder -->
+          <!-- AdSense (web) placeholder:
+               إذا تريد إعلانات على صفحة الويب ضع شفرة AdSense هنا (بعد تفعيل حساب AdSense).
+               AdMob خاص بالتطبيق (مذكور أسفل كتعليمات).
+          -->
           <div class="ad-slot" aria-hidden="true">
-            إعلان ويب — مساحة بانر (ضع شفرة AdSense هنا)<br>
-            <small class="small">مثال: 320×50 أو responsive</small>
-            <!-- Example AdSense snippet (replace data-ad-client & data-ad-slot with yours) -->
-            <!--
-            <ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-client="ca-pub-YOUR_ADSENSE_CLIENT"
-                 data-ad-slot="YOUR_AD_SLOT"
-                 data-ad-format="auto"
-                 data-full-width-responsive="true"></ins>
-            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-            -->
+            إعلان ويب — مساحة بانر (ضع شفرة AdSense هنا). مثال: responsive أو 320×50.
           </div>
 
           <div class="features" style="margin-top:18px">
@@ -129,26 +116,25 @@
           </div>
 
           <div class="contact">
-            <div>Contact: <a href="mailto:contact@khedmadz.app.com">contact@khedmadz.app.com</a></div>
             <div style="margin-top:8px">
-              <a class="socials" aria-label="socials" href="#">
-                <a href="https://facebook.com/" target="_blank" rel="noopener" style="text-decoration:none;margin-left:6px;">Facebook</a>
-                <a href="https://instagram.com/" target="_blank" rel="noopener" style="text-decoration:none;margin-left:6px;">Instagram</a>
-                <a href="https://tiktok.com/" target="_blank" rel="noopener" style="text-decoration:none;margin-left:6px;">TikTok</a>
-              </a>
+              تواصل معنا عبر الشبكات:
+              <div class="socials" style="margin-top:6px">
+                <a href="https://www.facebook.com/share/175tyBWDvn/" target="_blank" rel="noopener">Facebook</a>
+                <a href="https://www.instagram.com/khedma__dz?igsh=eTI5cHZ6dWFmMDhi" target="_blank" rel="noopener">Instagram</a>
+                <a href="https://www.tiktok.com/@khedma__dz?_r=1&_t=ZS-91qhSVc4nA1" target="_blank" rel="noopener">TikTok</a>
+              </div>
             </div>
           </div>
         </div>
 
         <div class="hero-right">
-          <!-- Phone mockup or image -->
+          <!-- الصورة أو mockup للتطبيق -->
           <img src="app.html" alt="App screenshot" style="width:100%;border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,.08)">
         </div>
       </div>
 
-      <!-- Second ad slot further down -->
       <div class="ad-slot" style="margin-top:18px">
-        موضع إعلان آخر — ضع شفرة AdSense أو مؤقت تحميل إعلان.
+        موضع إعلان آخر — ضع شفرة AdSense هنا لصفحة الويب. (أو عرض رسالة: "إعلان مؤقت").
       </div>
     </main>
 
@@ -158,11 +144,10 @@
   </div>
 
   <script>
-    // quick safety: replace PLAY_STORE_URL check
+    // safety: replace PLAY_STORE_URL if still placeholder
     (function(){
       var btn = document.getElementById('downloadBtn');
       if(btn.href === 'PLAY_STORE_URL'){
-        // if still placeholder, link to Play store search for KhedmaDZ
         btn.href = 'https://play.google.com/store/search?q=KhedmaDZ&c=apps';
       }
     })();
