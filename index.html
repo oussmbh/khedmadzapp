@@ -5,77 +5,128 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>KhedmaDZ — وظائف محلية وسريعة</title>
 
-  <!-- font changed to Tajawal for a cleaner Arabic look -->
-  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;700&display=swap" rel="stylesheet">
 
   <style>
     :root{
-      --accent:#f2b31a;
+      --accent:#f0b429; /* أصفر CTA */
+      --dark:#111;
       --muted:#777;
-      --card-bg:#fff;
-      --page-bg:#fafafa;
-      --max-width:1200px;
+      --card:#fff;
+      --shadow: 0 12px 30px rgba(13,13,13,0.06);
     }
-    html,body{height:100%;}
-    body{
-      margin:0;
-      font-family: 'Tajawal', system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans Arabic', sans-serif;
-      background:var(--page-bg);
-      color:#222;
-      line-height:1.6;
+
+    html,body{height:100%;margin:0;font-family:"Tajawal",system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial;direction:rtl;background:#fff;color:var(--dark);-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1180px;margin:0 auto;padding:16px;}
+
+    /* HEADER */
+    .site-header{
+      position:fixed;
+      top:0;left:0;right:0;
+      background:rgba(255,255,255,0.98);
+      border-bottom:1px solid #f0f0f0;
+      z-index:1200;
+      transition:height .22s ease,box-shadow .22s ease,padding .22s ease,transform .22s ease;
+      display:flex;align-items:center;justify-content:center;
+      height:86px;
+      backdrop-filter: blur(4px);
     }
-    .container{max-width:var(--max-width);margin:0 auto;padding:18px}
+    .site-header.shrink{height:62px;box-shadow:0 6px 18px rgba(10,10,10,0.04)}
+    .site-header .container{display:flex;align-items:center;justify-content:space-between;padding:0 10px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo-wrap{width:64px;height:64px;border-radius:12px;background:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(0,0,0,0.06)}
+    .logo{max-width:46px;height:auto;display:block}
+    .title{font-weight:700;font-size:18px}
+    .tag{font-size:11px;color:var(--muted);margin-top:2px}
 
-    /* header */
-    .site-header{display:flex;align-items:center;justify-content:space-between;padding:14px 0;border-bottom:1px solid #eee}
-    .brand{display:flex;align-items:center;gap:14px}
-    .logo{height:80px;width:80px;object-fit:contain;border-radius:12px;box-shadow:0 8px 20px rgba(0,0,0,0.08);background:#fff;padding:6px}
-    .title{font-weight:900;font-size:20px}
-    .tag{font-size:12px;color:#999}
-    .nav a{margin-left:18px;text-decoration:none;color:#222}
+    .nav{display:flex;gap:16px;align-items:center}
+    .nav a{color:#222;padding:6px 8px;font-weight:500;font-size:15px}
 
-    /* hero */
-    .hero{padding:40px 0;}
-    .hero-card{max-width:760px;margin-left:auto}
-    .h1{font-size:36px;margin:0 0 10px;font-weight:900}
-    .h2{color:var(--muted);margin:0 0 18px}
+    /* Hero */
+    .hero{padding-top:120px;padding-bottom:30px}
+    .hero-card{display:flex;flex-direction:column;align-items:center;text-align:center;padding:8px}
+    .h1{font-size:34px;margin:4px 0 6px;font-weight:700}
+    .h2{color:var(--muted);max-width:820px}
 
-    .cta{display:inline-block;background:var(--accent);color:#111;padding:12px 22px;border-radius:12px;text-decoration:none;font-weight:700;box-shadow:0 8px 20px rgba(242,179,26,0.25)}
-    .meta .small{color:var(--muted);font-size:13px}
+    /* main CTA inside hero */
+    .cta{
+      display:inline-flex;align-items:center;gap:10px;
+      background:linear-gradient(0deg,var(--accent),#f2b338);
+      color:#111;padding:12px 18px;border-radius:10px;font-weight:700;margin-top:14px;
+      box-shadow: 0 10px 30px rgba(243,167,48,0.12);
+    }
+    .cta svg{width:20px;height:20px;flex-shrink:0}
 
-    .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:18px}
-    .card{background:var(--card-bg);padding:18px;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,0.04)}
+    /* small contact line */
+    .meta{margin-top:12px;color:var(--muted);font-size:13px}
 
-    /* screenshots area (kept single copy, horizontal scroll on small screens) */
-    .screenshots{margin-top:30px;padding-left:12px}
-    .app-screenshots-grid{display:flex;gap:18px;justify-content:flex-start;align-items:flex-start;flex-wrap:nowrap;overflow-x:auto;padding:10px 6px;margin-top:12px;-webkit-overflow-scrolling:touch;}
-    .app-screenshots-grid .shot{flex:0 0 auto;width:260px;text-align:center;margin:0}
-    .app-screenshots-grid img{display:block;width:100%;height:auto;border-radius:12px}
+    /* features cards */
+    .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:28px}
+    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:var(--shadow)}
 
-    footer.footer{margin-top:40px;padding:28px 0}
-    .contacts a{color:var(--accent);text-decoration:none}
+    /* screenshots row */
+    .app-screenshots-grid{display:flex;gap:18px;overflow-x:auto;padding:12px 6px;margin-top:18px}
+    .app-screenshots-grid .shot{flex:0 0 auto;width:260px}
 
-    /* smaller screens */
+    /* Footer */
+    .footer{padding:36px 0;margin-top:60px;background:transparent}
+
+    /* Sticky top CTA that appears on scroll */
+    .sticky-cta{
+      position:fixed;left:12px;right:12px;top:14px;display:flex;justify-content:center;z-index:1400;
+      pointer-events:none;opacity:0;transform:translateY(-6px);transition:all .22s ease;
+    }
+    .sticky-cta.show{opacity:1;transform:translateY(0);pointer-events:auto}
+    .sticky-cta .bar{background:var(--accent);color:#111;padding:10px 16px;border-radius:12px;display:flex;align-items:center;gap:12px;box-shadow:0 10px 30px rgba(243,167,48,0.14);width:fit-content}
+    .sticky-cta .bar a{color:#111;font-weight:700;display:inline-flex;align-items:center;gap:8px}
+    .sticky-cta .bar .small{font-size:13px;color:rgba(0,0,0,0.65);font-weight:600}
+
+    /* responsive */
     @media (max-width:900px){
-      .container{padding:12px}
       .h1{font-size:28px}
-      .logo{height:64px;width:64px}
-      .hero-card{width:100%}
-      .app-screenshots-grid{padding:8px 4px}
+      .site-header{height:72px}
+      .site-header.shrink{height:54px}
+      .logo-wrap{width:56px;height:56px}
+    }
+    @media (max-width:520px){
+      .h1{font-size:22px}
+      .h2{font-size:14px}
+      .brand .title{display:none} /* hide title on very small screens to avoid overlap */
+      .nav{display:none}
+      .hero{padding-top:100px}
+      .sticky-cta{left:8px;right:8px;top:8px}
     }
 
-    /* ensure no accidental large heights reserved */
-    .hero, .hero-card, .screenshots, .app-screenshots-grid { min-height: 0; }
-
+    /* small utility */
+    .center{text-align:center}
   </style>
 </head>
 <body>
-  <div class="container">
 
-    <!-- Header -->
-    <header class="site-header" role="banner">
+  <!-- Sticky CTA (appears when scroll down) -->
+  <div id="stickyCTA" class="sticky-cta" aria-hidden="true">
+    <div class="bar" role="region" aria-label="تحميل التطبيق">
+      <!-- Google Play SVG icon -->
+      <a class="cta" href="https://play.google.com/store/apps/details?id=com.khedmadz.app" target="_blank" rel="noopener" style="pointer-events:auto;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="20" height="20" aria-hidden="true">
+          <path fill="#000" d="M325.3 234.3L104.8 16.9C99.5 11.8 92.6 9 85.6 9c-7.2 0-14.5 2.8-19.7 8.4C60.4 25.9 56 35 56 44.9v422.2c0 9.9 4.4 19 9.9 27.6 5.2 5.6 12.5 8.4 19.7 8.4 7 0 13.9-2.8 19.2-7.9l220.5-217.4c6.2-6.1 6.2-16 0-22.9z"/>
+          <path fill="#3bccff" d="M344.3 272.8L200.4 359.9 325.3 429.1 424.6 333.7z"/>
+          <path fill="#4caf50" d="M104.8 495.1L357.1 284.7 325.3 234.3 104.8 495.1z"/>
+        </svg>
+        <span class="small">تحميل التطبيق — مجاناً على Google Play</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header id="siteHeader" class="site-header" role="banner">
+    <div class="container">
       <div class="brand" style="gap:12px">
-        <img class="logo" src="design.dz.png" alt="KhedmaDZ">
+        <div class="logo-wrap" aria-hidden="true">
+          <img class="logo" src="design.dz.png" alt="KhedmaDZ logo">
+        </div>
         <div>
           <div class="title">KhedmaDZ</div>
           <div class="tag">Your opportunity starts here</div>
@@ -88,24 +139,30 @@
         <a href="about.html">عنّا</a>
         <a href="privacy.html">الخصوصية</a>
       </nav>
-    </header>
+    </div>
+  </header>
 
-    <!-- Hero -->
+  <main>
     <section class="hero" aria-labelledby="hero-heading">
-      <div class="hero-card">
-        <h1 id="hero-heading" class="h1">كل الوظائف المحلية في مكان واحد</h1>
-        <p class="h2">انشر عرضك أو ابحث عن فرصة مناسبة حسب الولاية والمجال. سهولة في النشر وسرعة في العثور على المرشحين.</p>
+      <div class="container hero-card">
+        <h1 id="hero-heading" class="h1 center">كل الوظائف المحلية في مكان واحد</h1>
+        <p class="h2 center">انشر عرضك أو ابحث عن فرصة مناسبة حسب الولاية والمجال. سهولة في النشر وسرعة في العثور على المرشحين.</p>
 
-        <div style="margin-top:12px">
-          <a class="cta" href="https://play.google.com/store/apps/details?id=com.khedmadz.app" target="_blank" rel="noopener">تحميل التطبيق — مجاناً على Google Play</a>
+        <a class="cta" href="https://play.google.com/store/apps/details?id=com.khedmadz.app" target="_blank" rel="noopener" aria-label="تحميل التطبيق على Google Play">
+          <!-- Google Play SVG inside main CTA -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="20" height="20" aria-hidden="true">
+            <path fill="#111" d="M325.3 234.3L104.8 16.9C99.5 11.8 92.6 9 85.6 9c-7.2 0-14.5 2.8-19.7 8.4C60.4 25.9 56 35 56 44.9v422.2c0 9.9 4.4 19 9.9 27.6 5.2 5.6 12.5 8.4 19.7 8.4 7 0 13.9-2.8 19.2-7.9l220.5-217.4c6.2-6.1 6.2-16 0-22.9z"/>
+            <path fill="#3bccff" d="M344.3 272.8L200.4 359.9 325.3 429.1 424.6 333.7z"/>
+            <path fill="#4caf50" d="M104.8 495.1L357.1 284.7 325.3 234.3 104.8 495.1z"/>
+          </svg>
+          تحميل التطبيق — مجاناً على Google Play
+        </a>
+
+        <div class="meta center" style="margin-top:10px">
+          <span class="small">متوفر على Google Play · اتصل: <a href="mailto:contact@khedmadz.app.com">contact@khedmadz.app.com</a></span>
         </div>
 
-        <div class="meta" style="margin-top:14px">
-          <span class="small">متوفر على Google Play</span> ·
-          <span class="small">اتصل: <a href="mailto:contact@khedmadz.app.com">contact@khedmadz.app.com</a></span>
-        </div>
-
-        <div class="features" style="margin-top:18px">
+        <div class="features" style="margin-top:22px; width:100%;">
           <div class="card">
             <h3>نشر سريع</h3>
             <p>أنشئ إعلان عمل خلال دقائق واستقبل الطلبات مباشرة.</p>
@@ -120,102 +177,72 @@
           </div>
         </div>
 
-      </div>
-
-      <!-- Screenshots grid (single copy only) -->
-      <aside class="screenshots center" aria-label="App screenshots" style="padding-left:12px">
-        <h3 style="margin-bottom:8px">نظرة داخل التطبيق</h3>
-
-        <div class="app-screenshots-grid" role="list">
-
-          <figure class="shot" role="listitem">
-            <div style="padding:16px;border-radius:18px;background:#fff;box-shadow:0 18px 40px rgba(0,0,0,0.08);">
-              <img src="screenshot1.png" alt="قائمة الوظائف">
-            </div>
-            <figcaption style="margin-top:10px;font-size:14px;color:#777">قائمة الوظائف</figcaption>
+        <div class="app-screenshots-grid center" aria-label="عرض لصور التطبيق" style="margin-top:22px">
+          <figure class="shot">
+            <img src="screenshot1.png" alt="قائمة الوظائف" style="width:100%;border-radius:12px;box-shadow:0 18px 40px rgba(0,0,0,0.06)">
+            <figcaption style="margin-top:8px;color:var(--muted);font-size:13px">قائمة الوظائف</figcaption>
           </figure>
-
-          <figure class="shot" role="listitem">
-            <div style="padding:16px;border-radius:18px;background:#fff;box-shadow:0 18px 40px rgba(0,0,0,0.08);">
-              <img src="screenshot2.png" alt="الصفحة الرئيسية">
-            </div>
-            <figcaption style="margin-top:10px;font-size:14px;color:#777">الصفحة الرئيسية</figcaption>
+          <figure class="shot">
+            <img src="screenshot2.png" alt="الصفحة الرئيسية" style="width:100%;border-radius:12px;box-shadow:0 18px 40px rgba(0,0,0,0.06)">
+            <figcaption style="margin-top:8px;color:var(--muted);font-size:13px">الصفحة الرئيسية</figcaption>
           </figure>
-
-          <figure class="shot" role="listitem">
-            <div style="padding:16px;border-radius:18px;background:#fff;box-shadow:0 18px 40px rgba(0,0,0,0.08);">
-              <img src="screenshot3.png" alt="نشر إعلان">
-            </div>
-            <figcaption style="margin-top:10px;font-size:14px;color:#777">نشر إعلان</figcaption>
+          <figure class="shot">
+            <img src="screenshot3.png" alt="نشر إعلان" style="width:100%;border-radius:12px;box-shadow:0 18px 40px rgba(0,0,0,0.06)">
+            <figcaption style="margin-top:8px;color:var(--muted);font-size:13px">نشر إعلان</figcaption>
           </figure>
-
         </div>
 
-        <div style="margin-top:8px;text-align:center;color:#999;font-size:13px">اسحب الأفقي على الهاتف للعرض ⇆</div>
-      </aside>
-    </section>
-
-    <!-- For Employers -->
-    <section class="section" aria-labelledby="for-employers">
-      <div class="container">
-        <h2 id="for-employers" class="center">لأصحاب العمل</h2>
-        <p class="center small">نوفر لك أدوات سريعة لنشر عروضك والوصول لمرشحين حقيقيين.</p>
-
-        <div class="employer-boxes" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:14px">
-          <div class="card">
-            <h3>نشر فعال</h3>
-            <p>إنشاء إعلان واضح مع متطلبات العمل والموقع.</p>
-          </div>
-          <div class="card">
-            <h3>تسويق محلي</h3>
-            <p>وصول للمرشحين داخل الولايات المحددة.</p>
-          </div>
-          <div class="card">
-            <h3>متابعة الأداء</h3>
-            <p>عرض الطلبات وفرز المرشحين بسرعة.</p>
-          </div>
-        </div>
       </div>
     </section>
 
-    <!-- Blog + Resources -->
-    <section class="section" aria-labelledby="blog">
+    <!-- rest content... -->
+    <section style="padding:30px 0;">
       <div class="container">
-        <h2 id="blog" class="center">مقالات ونصائح</h2>
-        <div class="blog-list center">
-          <p class="small">مقالات قصيرة تساعدك على كتابة إعلان جيد وإيجاد الموظفين.</p>
-          <ul style="list-style: none;padding:0;margin:12px 0;">
-            <li><a href="article1.html">— كيف تكتب سيرة ذاتية احترافية</a></li>
-            <li><a href="article2.html">— أفضل طرق البحث عن عمل في الجزائر</a></li>
-            <li><a href="article3.html">— نصائح لنشر إعلان يجذب مرشحين</a></li>
-          </ul>
-        </div>
+        <h2 class="center">لأصحاب العمل</h2>
+        <div style="height:1px"></div>
       </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer" role="contentinfo">
-      <div class="container">
-        <div class="row" style="display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;align-items:center">
-          <div class="contacts">
-            <strong>تواصل معنا</strong><br>
-            <a href="mailto:contact@khedmadz.app.com">contact@khedmadz.app.com</a> ·
-            <a href="mailto:support@khedmadz.app.com">support@khedmadz.app.com</a> ·
-            <a href="mailto:info@khedmadz.app.com">info@khedmadz.app.com</a>
-          </div>
-
-          <div class="socials small">
-            <strong>تابعنا</strong><br>
-            <a href="https://www.facebook.com/share/175tyBWDvn/" target="_blank" rel="noopener">Facebook</a> ·
-            <a href="https://www.instagram.com/khedma__dz?igsh=eTI5cHZ6dWFmMDhi" target="_blank" rel="noopener">Instagram</a> ·
-            <a href="https://www.tiktok.com/@khedma__dz?_r=1&_t=ZS-91qhSVc4nA1" target="_blank" rel="noopener">TikTok</a>
-          </div>
+    <footer class="footer">
+      <div class="container center">
+        <div style="max-width:900px;margin:0 auto;color:var(--muted)">
+          <p>تواصل معنا: <a href="mailto:info@khedmadz.app.com">info@khedmadz.app.com</a> · <a href="mailto:support@khedmadz.app.com">support@khedmadz.app.com</a></p>
+          <p style="margin-top:10px;color:#aaa">© 2025 KhedmaDZ — جميع الحقوق محفوظة</p>
         </div>
-
-        <p class="center small" style="margin-top:14px">© 2025 KhedmaDZ — جميع الحقوق محفوظة</p>
       </div>
     </footer>
 
-  </div>
+  </main>
+
+  <script>
+    // shrink header on scroll & show sticky CTA
+    (function(){
+      const header = document.getElementById('siteHeader');
+      const sticky = document.getElementById('stickyCTA');
+      const showAt = 200; // pixels scrolled before showing sticky bar (عدّل عند الحاجة)
+
+      function onScroll(){
+        const y = window.scrollY || window.pageYOffset;
+        if(y > 60){
+          header.classList.add('shrink');
+        } else {
+          header.classList.remove('shrink');
+        }
+
+        if(y > showAt){
+          sticky.classList.add('show');
+          sticky.setAttribute('aria-hidden','false');
+        } else {
+          sticky.classList.remove('show');
+          sticky.setAttribute('aria-hidden','true');
+        }
+      }
+
+      window.addEventListener('scroll', onScroll, {passive:true});
+      // init
+      onScroll();
+    })();
+  </script>
+
 </body>
 </html>
