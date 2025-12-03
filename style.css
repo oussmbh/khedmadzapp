@@ -1,50 +1,115 @@
+/* قاعدة عامة */
 :root{
-  --accent:#f5c21a;
-  --dark:#111;
-  --muted:#666;
-  --bg:#ffffff;
-  --card:#fbfbfb;
-  --border:#eee;
-  --maxw:1100px;
-  --radius:12px;
+  --accent:#f3c13a; /* أصفر مائل كما في الصور */
+  --muted:#9b9b9b;
+  --card-bg:#ffffff;
+  --card-shadow: 0 12px 30px rgba(11,11,11,0.04);
+  --max-width:1180px;
   --container-padding:20px;
+  --font-serif: "Cairo", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
 }
+
 *{box-sizing:border-box}
-html,body{height:100%;margin:0;font-family: 'Cairo', system-ui, sans-serif;background:var(--bg);color:var(--dark);line-height:1.6}
-a{color:var(--accent);text-decoration:none}
-.container{max-width:var(--maxw);margin:0 auto;padding:var(--container-padding)}
-.site-header{display:flex;align-items:center;justify-content:space-between;padding:18px 0;border-bottom:1px solid var(--border);background:#fff;position:sticky;top:0;z-index:40}
-.brand{display:flex;align-items:center;gap:14px}
-.brand img.logo{height:56px}
-.brand .title{font-weight:800;font-size:20px}
-.brand .tag{font-size:13px;color:var(--muted)}
-.nav{display:flex;gap:14px;align-items:center}
-.nav a{color:var(--dark);padding:8px 10px;border-radius:8px}
-.nav a:hover{background:#f7f7f7}
-.hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;padding:36px 0}
-@media(max-width:920px){.hero{grid-template-columns:1fr;padding:28px 0}}
-.hero .hero-card{background:linear-gradient(180deg,#fff,#fbfbfb);padding:28px;border-radius:16px;box-shadow:0 8px 30px rgba(0,0,0,0.04)}
-.h1{font-size:30px;margin:0 0 10px}
-.h2{color:var(--muted);margin:0 0 18px}
-.cta{display:inline-block;background:var(--accent);color:#000;padding:12px 20px;border-radius:10px;font-weight:700}
-.hero .meta{margin-top:16px;color:var(--muted);font-size:14px}
-.screenshots{display:flex;flex-direction:column;gap:12px;align-items:center}
-.screenshots img{width:320px;border-radius:18px;box-shadow:0 12px 30px rgba(0,0,0,0.08)}
-.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:22px}
-.card{background:var(--card);padding:18px;border-radius:12px;border:1px solid var(--border)}
-.section{padding:28px 0}
-.section h3{margin:0 0 10px}
-.employer-boxes{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:14px}
-.ad-slot{background:#fff;border:1px dashed #ddd;padding:18px;text-align:center;color:var(--muted);border-radius:10px;margin:18px 0}
-.blog-list ul{padding-left:18px}
-.footer{background:#f8f8f8;padding:28px 0;margin-top:36px;border-top:1px solid var(--border)}
-.footer .row{display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;align-items:center}
-.footer .contacts a{display:inline-block;margin-right:8px;color:var(--dark)}
-.small{font-size:13px;color:var(--muted)}
-.center{text-align:center}
-@media(max-width:600px){
-  .nav{display:none}
-  .hero{grid-template-columns:1fr}
-  .screenshots img{width:220px}
-  .brand .title{font-size:18px}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:var(--font-serif);
+  direction:rtl;
+  color:#222;
+  background:#fff;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.6;
+}
+
+/* Container */
+.container{
+  max-width:var(--max-width);
+  margin:0 auto;
+  padding:28px var(--container-padding);
+}
+
+/* Header */
+.site-header{
+  border-bottom:1px solid rgba(0,0,0,0.06);
+  background:#fff;
+  position:sticky;
+  top:0;
+  z-index:50;
+}
+.header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.logo{height:46px}
+.main-nav ul{list-style:none;margin:0;padding:0;display:flex;gap:22px;align-items:center}
+.main-nav a{color:#222;text-decoration:none;font-weight:600}
+
+/* Hero */
+.hero{display:flex;gap:30px;align-items:flex-start;padding:48px 0 60px}
+.hero-left{flex:1;min-width:260px;padding-top:14px}
+.hero-right{width:520px;display:flex;justify-content:center;align-items:center}
+.hero h1{font-size:34px;margin:0 0 12px;font-weight:800}
+.subtitle{color: #444;margin:6px 0 18px}
+.btn-cta{display:inline-block;background:var(--accent);color:#111;padding:12px 18px;border-radius:8px;text-decoration:none;font-weight:700;box-shadow:0 6px 18px rgba(243,193,58,0.12)}
+.meta{font-size:13px;color:var(--muted);margin-top:10px}
+.meta a{color:var(--accent);text-decoration:none}
+
+/* phones gallery */
+.phones{position:relative;display:flex;gap:18px;justify-content:center;align-items:center}
+.phone{background:#fff;border-radius:14px;padding:18px;box-shadow: var(--card-shadow);transform-origin:center;display:flex;justify-content:center;align-items:center}
+.phone img{display:block;max-width:220px;height:auto;border-radius:18px}
+
+/* position tweaks to mimic stacked phones */
+.p1{transform: translateX(0) rotate(-1deg); z-index:3}
+.p2{transform: translateX(-24px) translateY(6px) rotate(0deg); z-index:2}
+.p3{transform: translateX(-48px) translateY(12px) rotate(2deg); z-index:1}
+
+/* Features inline (hero) */
+.features-inline{display:flex;gap:12px;margin-top:22px}
+.feature-box{background:#fff;padding:18px;border-radius:10px;box-shadow: var(--card-shadow);flex:1}
+.feature-box h4{margin:0 0 8px}
+
+/* For employers */
+.for-employers{padding:40px 0}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}
+.card{background:#fff;border-radius:12px;padding:22px;box-shadow:var(--card-shadow);min-height:110px}
+.card h3{margin:0 0 10px;font-size:18px}
+
+/* Blog teaser */
+.blog-teaser{padding:40px 0 80px;text-align:center}
+.blog-teaser .teaser-list{list-style:none;padding:0;margin:14px 0 0}
+.blog-teaser .teaser-list li{margin:10px 0}
+.blog-teaser a{color:var(--accent);text-decoration:none;font-weight:700}
+
+/* Footer */
+.site-footer{border-top:1px solid rgba(0,0,0,0.05);background:#fafafa;padding:30px 0}
+.footer-grid{display:flex;gap:20px;align-items:flex-start;justify-content:space-between}
+.footer-grid .col{flex:1}
+.contact-col .emails a{color:var(--accent);text-decoration:none;font-weight:700}
+.muted{color:var(--muted)}
+
+/* Responsive: mobile first adjustments */
+@media (max-width:980px){
+  .hero{flex-direction:column-reverse;align-items:center;padding:28px 0}
+  .hero-right{width:100%}
+  .phones{gap:12px}
+  .phone img{max-width:260px}
+  .cards{grid-template-columns:1fr;align-items:stretch}
+  .features-inline{flex-direction:column}
+  .main-nav ul{gap:14px}
+  .header-inner{padding:8px 10px}
+  .logo{height:42px}
+  .hero h1{font-size:28px;text-align:center}
+  .hero-left{text-align:center}
+  .blog-teaser{text-align:center}
+  .footer-grid{flex-direction:column;gap:14px}
+}
+
+/* Small mobile tweaks */
+@media (max-width:420px){
+  .hero h1{font-size:22px}
+  .phone img{max-width:220px}
+  .btn-cta{padding:10px 14px}
 }
