@@ -10,6 +10,21 @@
 
   gtag('config', 'AW-17768304312');
 </script>
+  <script>
+  function gtag_report_conversion(url) {
+    var callback = function () {
+      if (typeof(url) !== 'undefined' && url) {
+        window.location = url; // فتح الرابط بعد إرسال التحويل
+      }
+    };
+    gtag('event', 'conversion', {
+      'send_to': 'AW-17768304312/j-SLCO2goMsbELidy5hC',
+      'event_callback': callback
+    });
+    return false;
+  }
+</script>
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>KhedmaDZ — وظائف محلية وسريعة</title>
@@ -168,14 +183,16 @@
         <p class="h2">انشر عرضك أو ابحث عن فرصة مناسبة حسب الولاية والمجال. سهولة في النشر وسرعة في العثور على المرشحين.</p>
 
         <div style="margin-top:12px">
-          <!-- CTA with download icon (SVG) -->
-          <a class="cta" href="https://play.google.com/store/apps/details?id=com.khedmadz.app" target="_blank" rel="noopener">
-            <!-- SVG download / get app icon -->
-            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
-              <path fill="currentColor" d="M5 20h14a1 1 0 0 0 1-1v-1a1 1 0 0 0-1-1h-3v2h2v1H6v-1h2v-2H5a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1zM12 3l5 5h-3v6h-4V8H7l5-5z"/>
-            </svg>
-            تحميل التطبيق — مجاناً على Google Play
-          </a>
+   <a class="cta" 
+   href="https://play.google.com/store/apps/details?id=com.khedmadz.app"
+   onclick="return gtag_report_conversion('https://play.google.com/store/apps/details?id=com.khedmadz.app');">
+  <!-- SVG download / get app icon -->
+  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+    <path fill="currentColor" d="M5 20h14a1 1 0 0 0 1-1v-1a1 1 0 0 0-1-1h-3v-2H8v2H5a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1z"/>
+  </svg>
+  تحميل التطبيق – مجاناً على Google Play
+</a>
+
         </div>
 
         <div class="meta" style="margin-top:14px">
