@@ -13,7 +13,7 @@
 <script>
   function gtag_report_conversion(url) {
     var callback = function () {
-      if (typeof(url) !== 'undefined' && url) {
+      if (typeof url !== 'undefined' && url) {
         window.location = url; // فتح الرابط بعد إرسال التحويل
       }
     };
