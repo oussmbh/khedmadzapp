@@ -118,7 +118,6 @@
       width:18px;
       height:18px;
       flex:0 0 auto;
-      /* استخدمنا margin-inline-end لتكون المسافة صحيحة في RTL */
       margin-inline-end:6px;
       vertical-align:middle;
     }
@@ -174,7 +173,7 @@
         <a href="privacy.html">الخصوصية</a>
       </nav>
 
-      <!-- زر الهيدر (اضيف هنا) -->
+      <!-- زر الهيدر (موجود هنا الآن) -->
       <div>
         <a id="download-btn-header" class="cta header-cta" role="button" tabindex="0">
           تحميل التطبيق – Google Play
@@ -240,71 +239,7 @@
         <p class="h2">انشر عرضك أو ابحث عن فرصة مناسبة حسب الولاية والمجال. سهولة في النشر وسرعة في العثور على المرشحين.</p>
 
         <div style="margin-top:12px">
-<!-- START: زر التحميل (استبدال مكان السطور 185-192) -->
-<a id="download-btn" class="cta" role="button" tabindex="0">
-  <!-- SVG download / get app icon (يمكنك استبدال المسار Path بالذي كان لديك لو أحببت) -->
-  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
-    <path fill="currentColor" d="M5 20h14v-2H5v2zm7-18L5.33 9h3.84v4h6.66V9h3.84L12 2z"/>
-  </svg>
-  تحميل التطبيق Google Play – مجاناً
-</a>
-
-<script>
-/* سكربت الربط: ضع هذا تحت الزر مباشرة (لن تحتاج تغييره) */
-(function(){
-  var btn = document.getElementById('download-btn');
-  if (!btn) return;
-
-  var url = 'https://play.google.com/store/apps/details?id=com.khedmadz.app';
-  var sendTo = 'AW-17768304312/j-SLCO2goMsbELidy5hC'; // اتركها كما في حساب Google Ads
-
-  function goUrl() {
-    window.location.href = url;
-  }
-
-  function reportAndGo(e) {
-    if (e && e.preventDefault) e.preventDefault();
-    console.log('download-btn clicked — start sending conversion');
-
-    if (typeof gtag !== 'function') {
-      console.warn('gtag not found — redirecting immediately');
-      goUrl();
-      return;
-    }
-
-    var called = false;
-    var callback = function(){
-      if (called) return;
-      called = true;
-      console.log('conversion callback fired — redirecting');
-      goUrl();
-    };
-
-    try {
-      gtag('event', 'conversion', {
-        'send_to': sendTo,
-        'event_callback': callback
-      });
-      // fallback: لو لم يستجب callback خلال 1500ms افتح الرابط
-      setTimeout(callback, 1500);
-    } catch (err) {
-      console.error('gtag send error', err);
-      goUrl();
-    }
-  }
-
-  btn.addEventListener('click', reportAndGo, false);
-  btn.addEventListener('keypress', function(e){
-    var key = e.key || e.keyCode;
-    if (key === 'Enter' || key === ' ' || key === 13 || key === 32) {
-      reportAndGo(e);
-    }
-  }, false);
-})();
-</script>
-<!-- END -->
-
-
+          <!-- زر الـHero أُزيل هنا لأننا نستخدم زر الهيدر فقط -->
         </div>
 
         <div class="meta" style="margin-top:14px">
