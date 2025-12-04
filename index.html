@@ -173,6 +173,64 @@
         <a href="about.html">عنّا</a>
         <a href="privacy.html">الخصوصية</a>
       </nav>
+
+      <!-- زر الهيدر (اضيف هنا) -->
+      <div>
+        <a id="download-btn-header" class="cta header-cta" role="button" tabindex="0">
+          تحميل التطبيق – Google Play
+        </a>
+      </div>
+      <script>
+      /* سكربت ربط التحويل لزر الهيدر */
+      (function(){
+        var btnh = document.getElementById('download-btn-header');
+        if (!btnh) return;
+
+        var urlh = 'https://play.google.com/store/apps/details?id=com.khedmadz.app';
+        var sendTo = 'AW-17768304312/j-SLCO2goMsbELidy5hC';
+
+        function goUrlH() { window.location.href = urlh; }
+
+        function reportAndGoH(e) {
+          if (e && e.preventDefault) e.preventDefault();
+          console.log('header download clicked — sending conversion');
+
+          if (typeof gtag !== 'function') {
+            console.warn('gtag not found — redirecting');
+            goUrlH();
+            return;
+          }
+
+          var called = false;
+          var callback = function(){
+            if (called) return;
+            called = true;
+            console.log('header conversion callback — redirecting');
+            goUrlH();
+          };
+
+          try {
+            gtag('event', 'conversion', {
+              'send_to': sendTo,
+              'event_callback': callback
+            });
+            // fallback بعد 1500ms
+            setTimeout(callback, 1500);
+          } catch (err) {
+            console.error('gtag send error', err);
+            goUrlH();
+          }
+        }
+
+        btnh.addEventListener('click', reportAndGoH, false);
+        btnh.addEventListener('keypress', function(e){
+          var key = e.key || e.keyCode;
+          if (key === 'Enter' || key === ' ' || key === 13 || key === 32) {
+            reportAndGoH(e);
+          }
+        }, false);
+      })();
+      </script>
     </header>
 
     <!-- Hero -->
