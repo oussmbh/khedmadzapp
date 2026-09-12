@@ -16,7 +16,6 @@
 <meta name="description" content="KhedmaDZ تطبيق جزائري يربط أصحاب العمل بالباحثين عن وظائف. ابحث حسب التخصص والولاية أو انشر عرض توظيف وتواصل مباشرة عبر واتساب أو البريد الإلكتروني.">
 <link rel="canonical" href="https://khedmadzapp.com/">
 
-<!-- Open Graph -->
 <meta property="og:title" content="KhedmaDZ | فرص العمل والتوظيف في الجزائر">
 <meta property="og:description" content="ابحث عن وظيفة أو انشر عرض توظيف في مختلف الولايات والمجالات، وتواصل مباشرة بنقرة واحدة.">
 <meta property="og:image" content="https://khedmadzapp.com/design.dz.png">
@@ -39,7 +38,7 @@
       </div>
     </a>
 
-    <nav class="main-nav" aria-label="القائمة الرئيسية">
+    <nav class="main-nav">
       <ul>
         <li><a href="#features">المميزات</a></li>
         <li><a href="#how-it-works">كيف يعمل؟</a></li>
@@ -56,7 +55,7 @@
         <a href="fr/index.html">FR</a>
         <a href="en/index.html">EN</a>
       </div>
-      <a href="#download" class="btn btn-primary js-download-btn">تحميل التطبيق</a>
+      <a class="btn btn-primary js-download-btn" role="button" tabindex="0">تحميل التطبيق</a>
     </div>
 
     <input type="checkbox" id="nav-toggle" class="nav-toggle">
@@ -80,116 +79,134 @@
 
 <!-- ===================== Hero ===================== -->
 <section class="hero">
+  <div class="aurora"><span class="a1"></span><span class="a2"></span><span class="a3"></span></div>
+
   <div class="container hero-grid">
-    <div class="hero-copy">
+    <div class="hero-copy" data-reveal>
       <span class="badge">منصة التوظيف الجزائرية الأولى</span>
-      <h1>فرص العمل وأفضل الكفاءات <span>في مكان واحد</span></h1>
+      <h1>فرص العمل وأفضل الكفاءات <span class="grad">في مكان واحد</span></h1>
       <p class="hero-lead">
-        يربطك تطبيق KhedmaDZ بأصحاب العمل والباحثين عن وظائف في مختلف
-        المجالات والولايات الجزائرية. ابحث حسب التخصص والولاية، أو انشر
-        عرض توظيف وتواصل مباشرة بنقرة واحدة عبر واتساب أو البريد الإلكتروني.
+        يربطك KhedmaDZ بأصحاب العمل والباحثين عن وظائف في مختلف المجالات
+        والولايات الجزائرية. ابحث حسب التخصص والولاية، أو انشر عرض توظيف
+        وتواصل مباشرة بنقرة واحدة عبر واتساب أو البريد الإلكتروني.
       </p>
 
       <div class="hero-actions">
-        <a id="download-btn" class="btn btn-primary js-download-btn" role="button" tabindex="0">
+        <a class="btn btn-primary btn-lg js-download-btn" role="button" tabindex="0">
           <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M5 20h14v-2H5v2zm7-18L5.33 9h3.84v4h6.66V9h3.84L12 2z"/></svg>
           تحميل من Google Play
         </a>
-        <a href="#how-it-works" class="btn btn-outline">كيف يعمل التطبيق؟</a>
+        <a href="#how-it-works" class="btn btn-ghost btn-lg">كيف يعمل التطبيق؟</a>
       </div>
 
-      <div class="hero-note">
-        <b>مجاني بالكامل</b> · متوفر حالياً لأجهزة Android
-      </div>
-
-      <div class="hero-stats">
-        <div class="stat"><b>+48</b><span>ولاية جزائرية</span></div>
-        <div class="stat"><b>مختلف</b><span>المجالات والتخصصات</span></div>
-        <div class="stat"><b>نقرة واحدة</b><span>للتواصل المباشر</span></div>
+      <div class="hero-trust">
+        <span class="dot"><b>مجاني</b> بالكامل</span>
+        <span class="dot"><b>Android</b> فقط حالياً</span>
+        <span class="dot">تواصل <b>بنقرة واحدة</b></span>
       </div>
     </div>
 
-    <div class="hero-media">
-      <div class="float-card c1">🔍 بحث حسب الولاية</div>
-      <div class="float-card c2">💬 تواصل عبر واتساب</div>
+    <div class="hero-media" data-reveal="scale">
+      <div class="float-card c1"><span class="ic">🔍</span> بحث حسب الولاية</div>
+      <div class="float-card c2"><span class="ic">💬</span> تواصل عبر واتساب</div>
       <div class="phone-frame">
         <img src="screenshot2.png" alt="الصفحة الرئيسية لتطبيق KhedmaDZ">
       </div>
     </div>
   </div>
+
+  <div class="container">
+    <div class="stats-bar" data-reveal>
+      <div class="stat"><b>+48</b><span>ولاية جزائرية</span></div>
+      <div class="stat"><b>∞</b><span>مجالات وتخصصات</span></div>
+      <div class="stat"><b>0 دج</b><span>تحميل مجاني</span></div>
+      <div class="stat"><b>1 نقرة</b><span>للتواصل المباشر</span></div>
+    </div>
+  </div>
 </section>
 
-<!-- ===================== Features ===================== -->
+<!-- ===================== Marquee ===================== -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span>الجزائر العاصمة</span><span>وهران</span><span>قسنطينة</span><span>عنابة</span>
+    <span>سطيف</span><span>باتنة</span><span>بجاية</span><span>تلمسان</span>
+    <span>بسكرة</span><span>ورقلة</span><span>سيدي بلعباس</span><span>البليدة</span>
+    <span>الجزائر العاصمة</span><span>وهران</span><span>قسنطينة</span><span>عنابة</span>
+    <span>سطيف</span><span>باتنة</span><span>بجاية</span><span>تلمسان</span>
+    <span>بسكرة</span><span>ورقلة</span><span>سيدي بلعباس</span><span>البليدة</span>
+  </div>
+</div>
+
+<!-- ===================== Features (Bento) ===================== -->
 <section id="features" class="section">
   <div class="container">
-    <div class="eyebrow">
+    <div class="eyebrow" data-reveal>
       <span class="badge">لماذا KhedmaDZ؟</span>
       <h2>كل ما تحتاجه للتوظيف والبحث عن عمل</h2>
-      <p>تجربة سهلة وسريعة تجمع الباحثين عن عمل وأصحاب العمل في تطبيق واحد.</p>
+      <p>تجربة سريعة وقوية تجمع الباحثين عن عمل وأصحاب العمل في تطبيق واحد.</p>
     </div>
 
-    <div class="grid-3">
-      <div class="card">
+    <div class="bento" data-reveal>
+      <div class="bento-item span-2 row-2 bento-visual">
+        <img src="screenshot1.png" alt="قائمة عروض العمل في KhedmaDZ">
+      </div>
+      <div class="bento-item">
         <div class="icon">🎯</div>
         <h3>بحث حسب التخصص</h3>
-        <p>اعثر على الوظائف التي تناسب مهاراتك وخبرتك في مختلف المجالات.</p>
+        <p>اعثر على الوظائف التي تناسب مهاراتك وخبرتك.</p>
       </div>
-      <div class="card">
+      <div class="bento-item">
         <div class="icon">📍</div>
         <h3>بحث حسب الولاية</h3>
-        <p>اكتشف فرص العمل القريبة منك في أي ولاية جزائرية.</p>
+        <p>اكتشف فرص العمل القريبة منك في أي ولاية.</p>
       </div>
-      <div class="card">
+      <div class="bento-item">
         <div class="icon">📢</div>
         <h3>نشر إعلانات التوظيف</h3>
-        <p>يمكن لأصحاب العمل نشر عروضهم والوصول إلى مرشحين حقيقيين.</p>
+        <p>انشر عرضك ووصّل إلى مرشحين حقيقيين.</p>
       </div>
-      <div class="card">
+      <div class="bento-item">
         <div class="icon">💬</div>
         <h3>تواصل مباشر</h3>
-        <p>تواصل عبر واتساب أو البريد الإلكتروني بنقرة واحدة، بدون وسيط.</p>
+        <p>واتساب أو بريد إلكتروني بنقرة واحدة بدون وسيط.</p>
       </div>
-      <div class="card">
+      <div class="bento-item span-2">
         <div class="icon">🗂️</div>
         <h3>مختلف المجالات</h3>
-        <p>تجارة، خدمات، إدارة، تقنية، بناء، تعليم، صحة وغيرها الكثير.</p>
-      </div>
-      <div class="card">
-        <div class="icon">⚡</div>
-        <h3>سهولة الاستخدام</h3>
-        <p>واجهة بسيطة تساعدك على الوصول إلى ما تحتاجه بسرعة.</p>
+        <p>تجارة، خدمات، إدارة، تقنية، بناء، تعليم، صحة وغيرها الكثير من المجالات المتاحة يومياً.</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ===================== How it works ===================== -->
-<section id="how-it-works" class="section section-alt">
+<section id="how-it-works" class="section" style="background:var(--bg-soft)">
   <div class="container">
-    <div class="eyebrow">
+    <div class="eyebrow" data-reveal>
       <span class="badge">كيف يعمل التطبيق؟</span>
-      <h2>ابدأ خلال دقائق</h2>
+      <h2>ابدأ خلال دقائق معدودة</h2>
     </div>
 
-    <div class="grid-2" style="margin-bottom:20px">
-      <div>
-        <h3 style="text-align:center;margin-bottom:20px">للباحثين عن عمل</h3>
-        <div class="steps" style="grid-template-columns:1fr">
-          <div class="step"><div class="num">1</div><h4>حمّل التطبيق</h4><p>حمّل KhedmaDZ من Google Play مجاناً.</p></div>
-          <div class="step"><div class="num">2</div><h4>اختر التخصص والولاية</h4><p>حدد المجال والمنطقة التي تبحث فيها.</p></div>
-          <div class="step"><div class="num">3</div><h4>تصفح العروض</h4><p>اطلع على تفاصيل كل فرصة عمل متاحة.</p></div>
-          <div class="step"><div class="num">4</div><h4>تواصل مباشرة</h4><p>راسل صاحب العمل عبر واتساب أو البريد.</p></div>
-        </div>
-      </div>
+    <div class="tabs" data-reveal>
+      <button class="tab-btn active" data-tab="seekers">للباحثين عن عمل</button>
+      <button class="tab-btn" data-tab="employers">لأصحاب العمل</button>
+    </div>
 
-      <div>
-        <h3 style="text-align:center;margin-bottom:20px">لأصحاب العمل</h3>
-        <div class="steps" style="grid-template-columns:1fr">
-          <div class="step"><div class="num">1</div><h4>حمّل التطبيق</h4><p>حمّل KhedmaDZ من Google Play مجاناً.</p></div>
-          <div class="step"><div class="num">2</div><h4>أنشئ إعلانك</h4><p>أضف تفاصيل الوظيفة والمجال والولاية.</p></div>
-          <div class="step"><div class="num">3</div><h4>انشر العرض</h4><p>يظهر إعلانك للباحثين المناسبين.</p></div>
-          <div class="step"><div class="num">4</div><h4>استقبل المرشحين</h4><p>تواصل مع المهتمين بنقرة واحدة.</p></div>
-        </div>
+    <div class="tab-panel active" id="tab-seekers" data-reveal>
+      <div class="timeline">
+        <div class="tl-step"><div class="num">1</div><h4>حمّل التطبيق</h4><p>من Google Play مجاناً وبدون أي رسوم.</p></div>
+        <div class="tl-step"><div class="num">2</div><h4>اختر التخصص والولاية</h4><p>حدد المجال والمنطقة التي تبحث فيها.</p></div>
+        <div class="tl-step"><div class="num">3</div><h4>تصفح العروض</h4><p>اطلع على تفاصيل كل فرصة عمل متاحة.</p></div>
+        <div class="tl-step"><div class="num">4</div><h4>تواصل مباشرة</h4><p>راسل صاحب العمل عبر واتساب أو البريد.</p></div>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="tab-employers" data-reveal>
+      <div class="timeline">
+        <div class="tl-step"><div class="num">1</div><h4>حمّل التطبيق</h4><p>من Google Play مجاناً وبدون أي رسوم.</p></div>
+        <div class="tl-step"><div class="num">2</div><h4>أنشئ إعلانك</h4><p>أضف تفاصيل الوظيفة والمجال والولاية.</p></div>
+        <div class="tl-step"><div class="num">3</div><h4>انشر العرض</h4><p>يظهر إعلانك للباحثين المناسبين مباشرة.</p></div>
+        <div class="tl-step"><div class="num">4</div><h4>استقبل المرشحين</h4><p>تواصل مع المهتمين بنقرة واحدة فقط.</p></div>
       </div>
     </div>
   </div>
@@ -198,31 +215,31 @@
 <!-- ===================== Job seekers ===================== -->
 <section id="job-seekers" class="section">
   <div class="container split">
-    <div class="split-copy">
+    <div class="split-copy" data-reveal>
       <span class="badge">للباحثين عن عمل</span>
       <h2>اكتشف فرصتك القادمة بسهولة</h2>
       <p>تصفح عروض العمل في مختلف المجالات، وابحث حسب التخصص والولاية، ثم تواصل مباشرة مع صاحب العمل.</p>
       <ul class="check-list">
-        <li>آلاف الفرص في مختلف الولايات والمجالات</li>
+        <li>فرص في مختلف الولايات والمجالات</li>
         <li>فلترة سريعة حسب التخصص والمنطقة</li>
         <li>تواصل مباشر عبر واتساب أو البريد الإلكتروني</li>
         <li>لا حاجة لوسيط بينك وبين صاحب العمل</li>
       </ul>
       <a class="btn btn-primary js-download-btn" role="button" tabindex="0">حمّل التطبيق وابدأ البحث</a>
     </div>
-    <div class="split-media">
+    <div class="split-media" data-reveal="scale">
       <img src="screenshot1.png" alt="قائمة عروض العمل في تطبيق KhedmaDZ">
     </div>
   </div>
 </section>
 
 <!-- ===================== Employers ===================== -->
-<section id="employers" class="section section-alt">
+<section id="employers" class="section" style="background:var(--bg-soft)">
   <div class="container split reverse">
-    <div class="split-media">
+    <div class="split-media" data-reveal="scale">
       <img src="screenshot3.png" alt="نشر إعلان توظيف في تطبيق KhedmaDZ">
     </div>
-    <div class="split-copy">
+    <div class="split-copy" data-reveal>
       <span class="badge">لأصحاب العمل</span>
       <h2>اعثر على الكفاءات المناسبة لفريقك</h2>
       <p>انشر إعلان التوظيف الخاص بك بسهولة، وحدد المجال والتخصص والولاية، ثم تواصل مباشرة مع المهتمين.</p>
@@ -240,12 +257,12 @@
 <!-- ===================== Screenshots ===================== -->
 <section class="section">
   <div class="container">
-    <div class="eyebrow">
+    <div class="eyebrow" data-reveal>
       <span class="badge">نظرة داخل التطبيق</span>
       <h2>كل ما تحتاجه في تطبيق واحد</h2>
     </div>
 
-    <div class="screens-wrap">
+    <div class="screens-wrap" data-reveal>
       <figure class="shot">
         <div class="shot-frame"><img src="screenshot2.png" alt="الصفحة الرئيسية"></div>
         <figcaption>الصفحة الرئيسية</figcaption>
@@ -264,26 +281,26 @@
 </section>
 
 <!-- ===================== FAQ ===================== -->
-<section class="section section-alt">
+<section class="section" style="background:var(--bg-soft)">
   <div class="container" style="max-width:760px">
-    <div class="eyebrow">
+    <div class="eyebrow" data-reveal>
       <span class="badge">الأسئلة الشائعة</span>
       <h2>هل لديك سؤال؟</h2>
     </div>
 
-    <details class="faq-item" open>
+    <details class="faq-item" open data-reveal>
       <summary>هل التطبيق مجاني؟</summary>
       <p>نعم، تحميل واستخدام KhedmaDZ مجاني بالكامل.</p>
     </details>
-    <details class="faq-item">
+    <details class="faq-item" data-reveal>
       <summary>على أي أجهزة يعمل التطبيق؟</summary>
       <p>KhedmaDZ متوفر حالياً لأجهزة Android فقط عبر Google Play.</p>
     </details>
-    <details class="faq-item">
+    <details class="faq-item" data-reveal>
       <summary>كيف يتم التواصل بين الطرفين؟</summary>
       <p>يتم التواصل مباشرة عبر واتساب أو البريد الإلكتروني بنقرة واحدة، دون وسيط.</p>
     </details>
-    <details class="faq-item">
+    <details class="faq-item" data-reveal>
       <summary>هل يمكنني نشر إعلان توظيف مجاناً؟</summary>
       <p>نعم، يمكن لأصحاب العمل نشر إعلاناتهم من خلال التطبيق مباشرة.</p>
     </details>
@@ -291,12 +308,13 @@
 </section>
 
 <!-- ===================== Final CTA ===================== -->
-<section id="download" class="section">
+<section class="section">
   <div class="container">
-    <div class="cta-band">
+    <div class="cta-band" data-reveal="scale">
+      <div class="aurora"><span class="a1"></span><span class="a2"></span></div>
       <h2>ابدأ رحلتك مع KhedmaDZ اليوم</h2>
       <p>حمّل التطبيق مجاناً وابحث عن فرصتك، أو انشر عرض التوظيف الخاص بك الآن.</p>
-      <a class="btn btn-primary js-download-btn" role="button" tabindex="0">
+      <a class="btn btn-primary btn-lg js-download-btn" role="button" tabindex="0">
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M5 20h14v-2H5v2zm7-18L5.33 9h3.84v4h6.66V9h3.84L12 2z"/></svg>
         تحميل من Google Play
       </a>
@@ -310,10 +328,15 @@
     <div class="footer-grid">
       <div class="footer-col footer-brand">
         <div class="brand">
-          <img class="logo" src="design.dz.png" alt="KhedmaDZ" style="height:40px;width:40px">
+          <img class="logo" src="design.dz.png" alt="KhedmaDZ" style="height:38px;width:38px">
           <div class="brand-text"><div class="title">KhedmaDZ</div></div>
         </div>
         <p>تطبيق جزائري يربط أصحاب العمل بالباحثين عن وظائف في مختلف المجالات والولايات.</p>
+        <div class="social-row">
+          <a href="https://www.facebook.com/share/175tyBWDvn/" target="_blank" rel="noopener" aria-label="Facebook">📘</a>
+          <a href="https://www.instagram.com/khedma__dz" target="_blank" rel="noopener" aria-label="Instagram">📷</a>
+          <a href="https://www.tiktok.com/@khedma__dz" target="_blank" rel="noopener" aria-label="TikTok">🎵</a>
+        </div>
       </div>
 
       <div class="footer-col">
@@ -326,4 +349,83 @@
         </ul>
       </div>
 
-      <div 
+      <div class="footer-col">
+        <h4>قانوني</h4>
+        <ul>
+          <li><a href="privacy.html">سياسة الخصوصية</a></li>
+          <li><a href="terms.html">شروط الاستخدام</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>تواصل معنا</h4>
+        <ul>
+          <li><a href="mailto:contact@khedmadz.app.com">contact@khedmadz.app.com</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2025 KhedmaDZ — جميع الحقوق محفوظة</span>
+      <span>صُنع بحب في الجزائر 🇩🇿</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ===================== Scripts ===================== -->
+<script>
+/* Download tracking */
+(function(){
+  var url = 'https://play.google.com/store/apps/details?id=com.khedmadz.app';
+  var sendTo = 'AW-17768304312/j-SLCO2goMsbELidy5hC';
+
+  function goUrl(){ window.location.href = url; }
+  function reportAndGo(e){
+    if (e && e.preventDefault) e.preventDefault();
+    if (typeof gtag !== 'function'){ goUrl(); return; }
+    var called = false;
+    var callback = function(){ if (called) return; called = true; goUrl(); };
+    try{
+      gtag('event','conversion',{ 'send_to': sendTo, 'event_callback': callback });
+      setTimeout(callback, 1500);
+    }catch(err){ goUrl(); }
+  }
+  document.querySelectorAll('.js-download-btn').forEach(function(btn){
+    btn.addEventListener('click', reportAndGo, false);
+    btn.addEventListener('keypress', function(e){
+      var key = e.key || e.keyCode;
+      if (key === 'Enter' || key === ' ' || key === 13 || key === 32) reportAndGo(e);
+    }, false);
+  });
+})();
+
+/* Scroll reveal */
+(function(){
+  var els = document.querySelectorAll('[data-reveal]');
+  var obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting){
+        entry.target.classList.add('in-view');
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  els.forEach(function(el){ obs.observe(el); });
+})();
+
+/* How it works tabs */
+(function(){
+  var buttons = document.querySelectorAll('.tab-btn');
+  buttons.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      buttons.forEach(function(b){ b.classList.remove('active'); });
+      document.querySelectorAll('.tab-panel').forEach(function(p){ p.classList.remove('active'); });
+      btn.classList.add('active');
+      document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
