@@ -15,7 +15,6 @@
 <title>KhedmaDZ | فرص العمل والتوظيف في الجزائر</title>
 <meta name="description" content="KhedmaDZ تطبيق جزائري يربط أصحاب العمل بالباحثين عن وظائف. ابحث حسب التخصص والولاية أو انشر عرض توظيف وتواصل مباشرة عبر واتساب أو البريد الإلكتروني.">
 <link rel="canonical" href="https://khedmadzapp.com/">
-
 <meta property="og:title" content="KhedmaDZ | فرص العمل والتوظيف في الجزائر">
 <meta property="og:description" content="ابحث عن وظيفة أو انشر عرض توظيف في مختلف الولايات والمجالات، وتواصل مباشرة بنقرة واحدة.">
 <meta property="og:image" content="https://khedmadzapp.com/design.dz.png">
@@ -27,9 +26,10 @@
 </head>
 <body>
 
-<!-- ===================== Header ===================== -->
+<!-- ===== Header ===== -->
 <header class="site-header">
   <div class="container header-inner">
+
     <a href="index.html" class="brand">
       <img class="logo" src="design.dz.png" alt="KhedmaDZ">
       <div class="brand-text">
@@ -55,13 +55,20 @@
         <a href="fr/index.html">FR</a>
         <a href="en/index.html">EN</a>
       </div>
-      <a class="btn btn-primary js-download-btn" role="button" tabindex="0">تحميل التطبيق</a>
+      <a class="btn btn-primary js-download-btn" role="button" tabindex="0">
+        تحميل التطبيق
+      </a>
     </div>
 
+    <!-- hamburger -->
     <input type="checkbox" id="nav-toggle" class="nav-toggle">
-    <label for="nav-toggle" class="nav-toggle-label"><span></span><span></span><span></span></label>
+    <label for="nav-toggle" class="nav-toggle-label">
+      <span></span><span></span><span></span>
+    </label>
+
   </div>
 
+  <!-- mobile nav (shown via CSS when checkbox checked) -->
   <nav class="main-nav-mobile">
     <a href="#features">المميزات</a>
     <a href="#how-it-works">كيف يعمل؟</a>
@@ -77,28 +84,39 @@
   </nav>
 </header>
 
-<!-- ===================== Hero ===================== -->
+<!-- ===== Hero ===== -->
 <section class="hero">
-  <div class="aurora"><span class="a1"></span><span class="a2"></span><span class="a3"></span></div>
+  <div class="aurora">
+    <span class="a1"></span>
+    <span class="a2"></span>
+    <span class="a3"></span>
+  </div>
 
   <div class="container hero-grid">
+
+    <!-- copy -->
     <div class="hero-copy" data-reveal>
       <span class="badge">✨ منصة التوظيف الجزائرية الأولى</span>
-      <h1>فرص العمل وأفضل الكفاءات <span class="grad">في مكان واحد</span></h1>
+      <h1>
+        فرص العمل وأفضل الكفاءات
+        <span class="grad">في مكان واحد</span>
+      </h1>
       <p class="hero-lead">
         يربطك KhedmaDZ بأصحاب العمل والباحثين عن وظائف في مختلف المجالات
         والولايات الجزائرية. ابحث حسب التخصص والولاية، أو انشر عرض توظيف
         وتواصل مباشرة بنقرة واحدة عبر واتساب أو البريد الإلكتروني.
       </p>
-
       <div class="hero-actions">
         <a class="btn btn-primary btn-lg js-download-btn" role="button" tabindex="0">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M5 20h14v-2H5v2zm7-18L5.33 9h3.84v4h6.66V9h3.84L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path fill="currentColor" d="M5 20h14v-2H5v2zm7-18L5.33 9h3.84v4h6.66V9h3.84L12 2z"/>
+          </svg>
           تحميل من Google Play
         </a>
-        <a href="#how-it-works" class="btn btn-ghost btn-lg">كيف يعمل التطبيق؟</a>
+        <a href="#how-it-works" class="btn btn-ghost btn-lg">
+          كيف يعمل التطبيق؟
+        </a>
       </div>
-
       <div class="hero-trust">
         <span class="dot"><b>مجاني</b> بالكامل</span>
         <span class="dot"><b>Android</b> فقط حالياً</span>
@@ -106,15 +124,28 @@
       </div>
     </div>
 
+    <!-- phone + float cards -->
     <div class="hero-media" data-reveal="scale">
-      <div class="float-card c1"><span class="ic">🔍</span> بحث حسب الولاية</div>
-      <div class="float-card c2"><span class="ic">💬</span> تواصل عبر واتساب</div>
+
+      <!-- البطاقتان فوق الهاتف -->
+      <div class="float-card c1">
+        <span class="ic">🔍</span>
+        بحث حسب الولاية
+      </div>
+      <div class="float-card c2">
+        <span class="ic">💬</span>
+        تواصل عبر واتساب
+      </div>
+
+      <!-- صورة الهاتف -->
       <div class="phone-frame">
         <img src="screenshot2.png" alt="الصفحة الرئيسية لتطبيق KhedmaDZ">
       </div>
+
     </div>
   </div>
 
+  <!-- stats -->
   <div class="container">
     <div class="stats-bar" data-reveal>
       <div class="stat"><b>+48</b><span>ولاية جزائرية</span></div>
@@ -125,19 +156,21 @@
   </div>
 </section>
 
-<!-- ===================== Marquee ===================== -->
+<!-- ===== Marquee ===== -->
 <div class="marquee">
   <div class="marquee-track">
-    <span>الجزائر العاصمة</span><span>وهران</span><span>قسنطينة</span><span>عنابة</span>
-    <span>سطيف</span><span>باتنة</span><span>بجاية</span><span>تلمسان</span>
-    <span>بسكرة</span><span>ورقلة</span><span>سيدي بلعباس</span><span>البليدة</span>
-    <span>الجزائر العاصمة</span><span>وهران</span><span>قسنطينة</span><span>عنابة</span>
-    <span>سطيف</span><span>باتنة</span><span>بجاية</span><span>تلمسان</span>
-    <span>بسكرة</span><span>ورقلة</span><span>سيدي بلعباس</span><span>البليدة</span>
+    <span>الجزائر العاصمة</span><span>وهران</span><span>قسنطينة</span>
+    <span>عنابة</span><span>سطيف</span><span>باتنة</span>
+    <span>بجاية</span><span>تلمسان</span><span>بسكرة</span>
+    <span>ورقلة</span><span>سيدي بلعباس</span><span>البليدة</span>
+    <span>الجزائر العاصمة</span><span>وهران</span><span>قسنطينة</span>
+    <span>عنابة</span><span>سطيف</span><span>باتنة</span>
+    <span>بجاية</span><span>تلمسان</span><span>بسكرة</span>
+    <span>ورقلة</span><span>سيدي بلعباس</span><span>البليدة</span>
   </div>
 </div>
 
-<!-- ===================== Features (Bento) ===================== -->
+<!-- ===== Features (Bento) ===== -->
 <section id="features" class="section">
   <div class="container">
     <div class="eyebrow" data-reveal>
@@ -173,13 +206,16 @@
       <div class="bento-item span-2">
         <div class="icon icon-blue">🗂️</div>
         <h3>مختلف المجالات</h3>
-        <p>تجارة، خدمات، إدارة، تقنية، بناء، تعليم، صحة وغيرها الكثير من المجالات المتاحة يومياً.</p>
+        <p>
+          تجارة، خدمات، إدارة، تقنية، بناء، تعليم، صحة وغيرها الكثير
+          من المجالات المتاحة يومياً.
+        </p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===================== How it works ===================== -->
+<!-- ===== How it works ===== -->
 <section id="how-it-works" class="section section-alt">
   <div class="container">
     <div class="eyebrow" data-reveal>
@@ -189,43 +225,80 @@
 
     <div class="tabs" data-reveal>
       <button class="tab-btn active" data-tab="seekers">للباحثين عن عمل</button>
-      <button class="tab-btn" data-tab="employers">لأصحاب العمل</button>
+      <button class="tab-btn"        data-tab="employers">لأصحاب العمل</button>
     </div>
 
     <div class="tab-panel active" id="tab-seekers" data-reveal>
       <div class="timeline">
-        <div class="tl-step blue"><div class="num">1</div><h4>حمّل التطبيق</h4><p>من Google Play مجاناً وبدون أي رسوم.</p></div>
-        <div class="tl-step blue"><div class="num">2</div><h4>اختر التخصص والولاية</h4><p>حدد المجال والمنطقة التي تبحث فيها.</p></div>
-        <div class="tl-step blue"><div class="num">3</div><h4>تصفح العروض</h4><p>اطلع على تفاصيل كل فرصة عمل متاحة.</p></div>
-        <div class="tl-step blue"><div class="num">4</div><h4>تواصل مباشرة</h4><p>راسل صاحب العمل عبر واتساب أو البريد.</p></div>
+        <div class="tl-step blue">
+          <div class="num">1</div>
+          <h4>حمّل التطبيق</h4>
+          <p>من Google Play مجاناً وبدون أي رسوم.</p>
+        </div>
+        <div class="tl-step blue">
+          <div class="num">2</div>
+          <h4>اختر التخصص والولاية</h4>
+          <p>حدد المجال والمنطقة التي تبحث فيها.</p>
+        </div>
+        <div class="tl-step blue">
+          <div class="num">3</div>
+          <h4>تصفح العروض</h4>
+          <p>اطلع على تفاصيل كل فرصة عمل متاحة.</p>
+        </div>
+        <div class="tl-step blue">
+          <div class="num">4</div>
+          <h4>تواصل مباشرة</h4>
+          <p>راسل صاحب العمل عبر واتساب أو البريد.</p>
+        </div>
       </div>
     </div>
 
     <div class="tab-panel" id="tab-employers" data-reveal>
       <div class="timeline">
-        <div class="tl-step yellow"><div class="num">1</div><h4>حمّل التطبيق</h4><p>من Google Play مجاناً وبدون أي رسوم.</p></div>
-        <div class="tl-step yellow"><div class="num">2</div><h4>أنشئ إعلانك</h4><p>أضف تفاصيل الوظيفة والمجال والولاية.</p></div>
-        <div class="tl-step yellow"><div class="num">3</div><h4>انشر العرض</h4><p>يظهر إعلانك للباحثين المناسبين مباشرة.</p></div>
-        <div class="tl-step yellow"><div class="num">4</div><h4>استقبل المرشحين</h4><p>تواصل مع المهتمين بنقرة واحدة فقط.</p></div>
+        <div class="tl-step yellow">
+          <div class="num">1</div>
+          <h4>حمّل التطبيق</h4>
+          <p>من Google Play مجاناً وبدون أي رسوم.</p>
+        </div>
+        <div class="tl-step yellow">
+          <div class="num">2</div>
+          <h4>أنشئ إعلانك</h4>
+          <p>أضف تفاصيل الوظيفة والمجال والولاية.</p>
+        </div>
+        <div class="tl-step yellow">
+          <div class="num">3</div>
+          <h4>انشر العرض</h4>
+          <p>يظهر إعلانك للباحثين المناسبين مباشرة.</p>
+        </div>
+        <div class="tl-step yellow">
+          <div class="num">4</div>
+          <h4>استقبل المرشحين</h4>
+          <p>تواصل مع المهتمين بنقرة واحدة فقط.</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===================== Job seekers ===================== -->
+<!-- ===== Job seekers ===== -->
 <section id="job-seekers" class="section">
   <div class="container split">
     <div class="split-copy" data-reveal>
       <span class="badge">للباحثين عن عمل</span>
       <h2>اكتشف فرصتك القادمة بسهولة</h2>
-      <p>تصفح عروض العمل في مختلف المجالات، وابحث حسب التخصص والولاية، ثم تواصل مباشرة مع صاحب العمل.</p>
+      <p>
+        تصفح عروض العمل في مختلف المجالات، وابحث حسب التخصص والولاية،
+        ثم تواصل مباشرة مع صاحب العمل.
+      </p>
       <ul class="check-list">
         <li>فرص في مختلف الولايات والمجالات</li>
         <li>فلترة سريعة حسب التخصص والمنطقة</li>
         <li>تواصل مباشر عبر واتساب أو البريد الإلكتروني</li>
         <li>لا حاجة لوسيط بينك وبين صاحب العمل</li>
       </ul>
-      <a class="btn btn-primary js-download-btn" role="button" tabindex="0">حمّل التطبيق وابدأ البحث</a>
+      <a class="btn btn-primary js-download-btn" role="button" tabindex="0">
+        حمّل التطبيق وابدأ البحث
+      </a>
     </div>
     <div class="split-media" data-reveal="scale">
       <img src="screenshot1.png" alt="قائمة عروض العمل في تطبيق KhedmaDZ">
@@ -233,54 +306,69 @@
   </div>
 </section>
 
-<!-- ===================== Employers ===================== -->
+<!-- ===== Employers ===== -->
 <section id="employers" class="section section-alt">
   <div class="container split reverse">
     <div class="split-media" data-reveal="scale">
       <img src="screenshot3.png" alt="نشر إعلان توظيف في تطبيق KhedmaDZ">
     </div>
     <div class="split-copy" data-reveal>
-      <span class="badge" style="background:var(--gradient-yellow);color:var(--dark);box-shadow:0 8px 20px rgba(251,191,36,0.35)">لأصحاب العمل</span>
+      <span class="badge"
+        style="background:var(--gradient-yellow);
+               color:var(--dark);
+               box-shadow:0 8px 20px rgba(251,191,36,0.35)">
+        لأصحاب العمل
+      </span>
       <h2>اعثر على الكفاءات المناسبة لفريقك</h2>
-      <p>انشر إعلان التوظيف الخاص بك بسهولة، وحدد المجال والتخصص والولاية، ثم تواصل مباشرة مع المهتمين.</p>
+      <p>
+        انشر إعلان التوظيف الخاص بك بسهولة، وحدد المجال والتخصص والولاية،
+        ثم تواصل مباشرة مع المهتمين.
+      </p>
       <ul class="check-list">
         <li>نشر إعلان واضح خلال دقائق</li>
         <li>وصول للمرشحين داخل الولايات المحددة</li>
         <li>استقبال طلبات المهتمين مباشرة</li>
         <li>تواصل بنقرة واحدة عبر واتساب أو البريد</li>
       </ul>
-      <a class="btn btn-primary js-download-btn" role="button" tabindex="0">حمّل التطبيق وانشر عرضك</a>
+      <a class="btn btn-primary js-download-btn" role="button" tabindex="0">
+        حمّل التطبيق وانشر عرضك
+      </a>
     </div>
   </div>
 </section>
 
-<!-- ===================== Screenshots ===================== -->
+<!-- ===== Screenshots ===== -->
 <section class="section">
   <div class="container">
     <div class="eyebrow" data-reveal>
       <span class="badge badge-outline">نظرة داخل التطبيق</span>
       <h2>كل ما تحتاجه في تطبيق واحد</h2>
     </div>
-
     <div class="screens-wrap" data-reveal>
       <figure class="shot">
-        <div class="shot-frame"><img src="screenshot2.png" alt="الصفحة الرئيسية"></div>
+        <div class="shot-frame">
+          <img src="screenshot2.png" alt="الصفحة الرئيسية">
+        </div>
         <figcaption>الصفحة الرئيسية</figcaption>
       </figure>
       <figure class="shot">
-        <div class="shot-frame"><img src="screenshot1.png" alt="قائمة الوظائف"></div>
+        <div class="shot-frame">
+          <img src="screenshot1.png" alt="قائمة الوظائف">
+        </div>
         <figcaption>قائمة الوظائف</figcaption>
       </figure>
       <figure class="shot">
-        <div class="shot-frame"><img src="screenshot3.png" alt="نشر إعلان"></div>
+        <div class="shot-frame">
+          <img src="screenshot3.png" alt="نشر إعلان">
+        </div>
         <figcaption>نشر إعلان توظيف</figcaption>
       </figure>
     </div>
-    <p class="center small">اسحب أفقياً للعرض ⇆</p>
+    <p class="center small" style="margin-top:6px">اسحب أفقياً للعرض ⇆</p>
   </div>
 </section>
 
-<!-- ===================== FAQ ===================== -->
+<!-- ===== FAQ ===== -->
 <section class="section section-alt">
   <div class="container" style="max-width:760px">
     <div class="eyebrow" data-reveal>
@@ -298,7 +386,10 @@
     </details>
     <details class="faq-item" data-reveal>
       <summary>كيف يتم التواصل بين الطرفين؟</summary>
-      <p>يتم التواصل مباشرة عبر واتساب أو البريد الإلكتروني بنقرة واحدة، دون وسيط.</p>
+      <p>
+        يتم التواصل مباشرة عبر واتساب أو البريد الإلكتروني بنقرة واحدة،
+        دون وسيط.
+      </p>
     </details>
     <details class="faq-item" data-reveal>
       <summary>هل يمكنني نشر إعلان توظيف مجاناً؟</summary>
@@ -307,34 +398,49 @@
   </div>
 </section>
 
-<!-- ===================== Final CTA ===================== -->
+<!-- ===== Final CTA ===== -->
 <section class="section">
   <div class="container">
     <div class="cta-band" data-reveal="scale">
       <h2>ابدأ رحلتك مع KhedmaDZ اليوم</h2>
-      <p>حمّل التطبيق مجاناً وابحث عن فرصتك، أو انشر عرض التوظيف الخاص بك الآن.</p>
+      <p>
+        حمّل التطبيق مجاناً وابحث عن فرصتك،
+        أو انشر عرض التوظيف الخاص بك الآن.
+      </p>
       <a class="btn btn-primary btn-lg js-download-btn" role="button" tabindex="0">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M5 20h14v-2H5v2zm7-18L5.33 9h3.84v4h6.66V9h3.84L12 2z"/></svg>
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path fill="currentColor" d="M5 20h14v-2H5v2zm7-18L5.33 9h3.84v4h6.66V9h3.84L12 2z"/>
+        </svg>
         تحميل من Google Play
       </a>
     </div>
   </div>
 </section>
 
-<!-- ===================== Footer ===================== -->
+<!-- ===== Footer ===== -->
 <footer class="site-footer">
   <div class="container">
     <div class="footer-grid">
+
       <div class="footer-col footer-brand">
         <div class="brand">
-          <img class="logo" src="design.dz.png" alt="KhedmaDZ" style="height:38px;width:38px">
-          <div class="brand-text"><div class="title">KhedmaDZ</div></div>
+          <img class="logo" src="design.dz.png" alt="KhedmaDZ"
+               style="height:38px;width:38px">
+          <div class="brand-text">
+            <div class="title">KhedmaDZ</div>
+          </div>
         </div>
-        <p>تطبيق جزائري يربط أصحاب العمل بالباحثين عن وظائف في مختلف المجالات والولايات.</p>
+        <p>
+          تطبيق جزائري يربط أصحاب العمل بالباحثين عن وظائف
+          في مختلف المجالات والولايات.
+        </p>
         <div class="social-row">
-          <a href="https://www.facebook.com/share/175tyBWDvn/" target="_blank" rel="noopener" aria-label="Facebook">📘</a>
-          <a href="https://www.instagram.com/khedma__dz" target="_blank" rel="noopener" aria-label="Instagram">📷</a>
-          <a href="https://www.tiktok.com/@khedma__dz" target="_blank" rel="noopener" aria-label="TikTok">🎵</a>
+          <a href="https://www.facebook.com/share/175tyBWDvn/"
+             target="_blank" rel="noopener" aria-label="Facebook">📘</a>
+          <a href="https://www.instagram.com/khedma__dz"
+             target="_blank" rel="noopener" aria-label="Instagram">📷</a>
+          <a href="https://www.tiktok.com/@khedma__dz"
+             target="_blank" rel="noopener" aria-label="TikTok">🎵</a>
         </div>
       </div>
 
@@ -359,9 +465,14 @@
       <div class="footer-col">
         <h4>تواصل معنا</h4>
         <ul>
-          <li><a href="mailto:contact@khedmadz.app.com">contact@khedmadz.app.com</a></li>
+          <li>
+            <a href="mailto:contact@khedmadz.app.com">
+              contact@khedmadz.app.com
+            </a>
+          </li>
         </ul>
       </div>
+
     </div>
 
     <div class="footer-bottom">
@@ -371,56 +482,73 @@
   </div>
 </footer>
 
-<!-- ===================== Scripts ===================== -->
+<!-- ===== Scripts ===== -->
 <script>
-/* Download tracking */
+/* ── Download tracking ── */
 (function(){
-  var url = 'https://play.google.com/store/apps/details?id=com.khedmadz.app';
+  var url    = 'https://play.google.com/store/apps/details?id=com.khedmadz.app';
   var sendTo = 'AW-17768304312/j-SLCO2goMsbELidy5hC';
 
   function goUrl(){ window.location.href = url; }
+
   function reportAndGo(e){
     if (e && e.preventDefault) e.preventDefault();
     if (typeof gtag !== 'function'){ goUrl(); return; }
     var called = false;
-    var callback = function(){ if (called) return; called = true; goUrl(); };
+    var cb = function(){ if (called) return; called = true; goUrl(); };
     try{
-      gtag('event','conversion',{ 'send_to': sendTo, 'event_callback': callback });
-      setTimeout(callback, 1500);
+      gtag('event','conversion',{ send_to:sendTo, event_callback:cb });
+      setTimeout(cb, 1500);
     }catch(err){ goUrl(); }
   }
+
   document.querySelectorAll('.js-download-btn').forEach(function(btn){
     btn.addEventListener('click', reportAndGo, false);
     btn.addEventListener('keypress', function(e){
-      var key = e.key || e.keyCode;
-      if (key === 'Enter' || key === ' ' || key === 13 || key === 32) reportAndGo(e);
+      var k = e.key || e.keyCode;
+      if (k==='Enter'||k===' '||k===13||k===32) reportAndGo(e);
     }, false);
   });
 })();
 
-/* Scroll reveal */
+/* ── Scroll reveal ── */
 (function(){
-  var els = document.querySelectorAll('[data-reveal]');
   var obs = new IntersectionObserver(function(entries){
-    entries.forEach(function(entry){
-      if (entry.isIntersecting){
-        entry.target.classList.add('in-view');
-        obs.unobserve(entry.target);
+    entries.forEach(function(en){
+      if(en.isIntersecting){
+        en.target.classList.add('in-view');
+        obs.unobserve(en.target);
       }
     });
-  }, { threshold: 0.15 });
-  els.forEach(function(el){ obs.observe(el); });
+  },{ threshold:0.14 });
+  document.querySelectorAll('[data-reveal]').forEach(function(el){
+    obs.observe(el);
+  });
 })();
 
-/* How it works tabs */
+/* ── Tabs (how it works) ── */
 (function(){
-  var buttons = document.querySelectorAll('.tab-btn');
-  buttons.forEach(function(btn){
+  document.querySelectorAll('.tab-btn').forEach(function(btn){
     btn.addEventListener('click', function(){
-      buttons.forEach(function(b){ b.classList.remove('active'); });
-      document.querySelectorAll('.tab-panel').forEach(function(p){ p.classList.remove('active'); });
+      document.querySelectorAll('.tab-btn').forEach(function(b){
+        b.classList.remove('active');
+      });
+      document.querySelectorAll('.tab-panel').forEach(function(p){
+        p.classList.remove('active');
+      });
       btn.classList.add('active');
-      document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+      var panel = document.getElementById('tab-' + btn.dataset.tab);
+      if(panel) panel.classList.add('active');
+    });
+  });
+})();
+
+/* ── Close mobile nav when a link is clicked ── */
+(function(){
+  document.querySelectorAll('.main-nav-mobile a').forEach(function(link){
+    link.addEventListener('click', function(){
+      var toggle = document.getElementById('nav-toggle');
+      if(toggle) toggle.checked = false;
     });
   });
 })();
