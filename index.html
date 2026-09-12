@@ -1,370 +1,329 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-  <!-- Google tag (gtag.js) -->
+<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17768304312"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'AW-17768304312');
 </script>
-<script>
-  function gtag_report_conversion(url) {
-    var callback = function () {
-      if (typeof url !== 'undefined' && url) {
-        window.location = url; // فتح الرابط بعد إرسال التحويل
-      }
-    };
-    gtag('event', 'conversion', {
-      'send_to': 'AW-17768304312/j-SLCO2goMsbELidy5hC',
-      'event_callback': callback
-    });
-    return false;
-  }
-</script>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>KhedmaDZ — وظائف محلية وسريعة</title>
 
-  <!-- font changed to Tajawal for a cleaner Arabic look -->
-  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;700;900&display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>KhedmaDZ | فرص العمل والتوظيف في الجزائر</title>
+<meta name="description" content="KhedmaDZ تطبيق جزائري يربط أصحاب العمل بالباحثين عن وظائف. ابحث حسب التخصص والولاية أو انشر عرض توظيف وتواصل مباشرة عبر واتساب أو البريد الإلكتروني.">
+<link rel="canonical" href="https://khedmadzapp.com/">
 
-  <style>
-    :root{
-      --accent:#f2b31a;
-      --muted:#777;
-      --card-bg:#fff;
-      --page-bg:#fafafa;
-      --max-width:1200px;
-    }
-    html,body{height:100%;}
-    body{
-      margin:0;
-      font-family: 'Tajawal', system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans Arabic', sans-serif;
-      background:var(--page-bg);
-      color:#222;
-      line-height:1.6;
-    }
-    .container{max-width:var(--max-width);margin:0 auto;padding:18px}
+<!-- Open Graph -->
+<meta property="og:title" content="KhedmaDZ | فرص العمل والتوظيف في الجزائر">
+<meta property="og:description" content="ابحث عن وظيفة أو انشر عرض توظيف في مختلف الولايات والمجالات، وتواصل مباشرة بنقرة واحدة.">
+<meta property="og:image" content="https://khedmadzapp.com/design.dz.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://khedmadzapp.com/">
 
-    /* header */
-    .site-header{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      padding:18px 0; /* زيادة بسيطة للمساحة العمودية */
-      border-bottom:1px solid #eee;
-      gap:18px;
-    }
-
-    /* Brand: اجعل النص (title+tag) يوازي شعار الصورة تماماً مركزياً */
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:14px;
-    }
-    /* حاوية العنوان بجانب الشعار: نستخدم عمود ونجعل النص مركزاً عمودياً */
-    .brand > div{
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-      /* يقلّل المسافة الفارغة الرأسية إذا احتاج */
-    }
-    .logo{
-      height:72px; /* خفّضت قليلاً ليكون تناسق أفضل مع النص */
-      width:72px;
-      object-fit:contain;
-      border-radius:12px;
-      box-shadow:0 8px 20px rgba(0,0,0,0.08);
-      background:#fff;
-      padding:6px;
-      flex-shrink:0;
-    }
-    .title{font-weight:900;font-size:20px;line-height:1;margin:0}
-    .tag{font-size:12px;color:#999;margin-top:4px}
-
-    /* navigation */
-    .nav a{
-      /* استخدمت المسافات المنطقية لتعمل جيداً في RTL و LTR */
-      margin-inline-start:18px;
-      text-decoration:none;
-      color:#222;
-      font-weight:600;
-    }
-
-    /* hero */
-    .hero{padding:40px 0;}
-    .hero-card{max-width:760px;margin-left:auto}
-    .h1{font-size:36px;margin:0 0 10px;font-weight:900}
-    .h2{color:var(--muted);margin:0 0 18px}
-
-    /* CTA with download icon */
-    .cta{
-      display:inline-flex;
-      align-items:center;
-      gap:10px; /* مسافة منطقية بين الأيقونة والنص */
-      background:var(--accent);
-      color:#111;
-      padding:12px 22px;
-      border-radius:12px;
-      text-decoration:none;
-      font-weight:700;
-      box-shadow:0 8px 20px rgba(242,179,26,0.25);
-    }
-    /* أيقونة الـ SVG داخل الزر */
-    .cta svg{
-      width:18px;
-      height:18px;
-      flex:0 0 auto;
-      /* استخدمنا margin-inline-end لتكون المسافة صحيحة في RTL */
-      margin-inline-end:6px;
-      vertical-align:middle;
-    }
-
-    .meta .small{color:var(--muted);font-size:13px}
-
-    .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:18px}
-    .card{background:var(--card-bg);padding:18px;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,0.04)}
-
-/* screenshots area (kept single copy, horizontal scroll on small screens) */
-    .screenshots{margin-top:30px;padding-left:12px}
-    .app-screenshots-grid{display:flex;gap:18px;justify-content:flex-start;align-items:flex-start;flex-wrap:nowrap;overflow-x:auto;padding:10px 6px;margin-top:12px;-webkit-overflow-scrolling:touch;}
-    .app-screenshots-grid .shot{flex:0 0 auto;width:260px;text-align:center;margin:0}
-    .app-screenshots-grid img{display:block;width:100%;height:auto;border-radius:12px}
-
-    footer.footer{margin-top:40px;padding:28px 0}
-    .contacts a{color:var(--accent);text-decoration:none}
-
-    /* smaller screens */
-    @media (max-width:900px){
-      .container{padding:12px}
-      .h1{font-size:28px}
-      .logo{height:64px;width:64px}
-      .hero-card{width:100%}
-      .app-screenshots-grid{padding:8px 4px}
-
-      /* تصغير تباعد الروابط على الشاشات الصغيرة */
-      .nav a{margin-inline-start:12px}
-    }
-
-    /* ensure no accidental large heights reserved */
-    .hero, .hero-card, .screenshots, .app-screenshots-grid { min-height: 0; }
-
-  </style>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
 
-    <!-- Header -->
-    <header class="site-header" role="banner">
-      <div class="brand" style="gap:12px">
-        <img class="logo" src="design.dz.png" alt="KhedmaDZ">
-        <div>
-          <div class="title">KhedmaDZ</div>
-          <div class="tag">Your opportunity starts here</div>
-        </div>
+<!-- ===================== Header ===================== -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="brand">
+      <img class="logo" src="design.dz.png" alt="KhedmaDZ">
+      <div class="brand-text">
+        <div class="title">KhedmaDZ</div>
+        <div class="tag">Your opportunity starts here</div>
       </div>
+    </a>
 
-      <nav class="nav" aria-label="Main Navigation">
-        <a href="index.html">الرئيسية</a>
-        <a href="blog.html">مقالات</a>
-        <a href="about.html">عنّا</a>
-        <a href="privacy.html">الخصوصية</a>
-      </nav>
-    </header>
+    <nav class="main-nav" aria-label="القائمة الرئيسية">
+      <ul>
+        <li><a href="#features">المميزات</a></li>
+        <li><a href="#how-it-works">كيف يعمل؟</a></li>
+        <li><a href="#job-seekers">للباحثين عن عمل</a></li>
+        <li><a href="#employers">لأصحاب العمل</a></li>
+        <li><a href="blog.html">مقالات</a></li>
+        <li><a href="about.html">عنّا</a></li>
+      </ul>
+    </nav>
 
-    <!-- Hero -->
-    <section class="hero" aria-labelledby="hero-heading">
-      <div class="hero-card">
-        <h1 id="hero-heading" class="h1">كل الوظائف المحلية في مكان واحد</h1>
-        <p class="h2">انشر عرضك أو ابحث عن فرصة مناسبة حسب الولاية والمجال. سهولة في النشر وسرعة في العثور على المرشحين.</p>
-
-        <div style="margin-top:12px">
-<!-- START: زر التحميل (موجود فقط هنا) -->
-<a id="download-btn" class="cta" role="button" tabindex="0">
-  <!-- SVG download / get app icon (يمكنك استبدال المسار Path بالذي كان لديك لو أحببت) -->
-  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
-    <path fill="currentColor" d="M5 20h14v-2H5v2zm7-18L5.33 9h3.84v4h6.66V9h3.84L12 2z"/>
-  </svg>
-  تحميل التطبيق Google Play – مجاناً
-</a>
-
-<script>
-/* سكربت الربط: ضع هذا تحت الزر مباشرة (لن تحتاج تغييره) */
-(function(){
-  var btn = document.getElementById('download-btn');
-  if (!btn) return;
-
-  var url = 'https://play.google.com/store/apps/details?id=com.khedmadz.app';
-  var sendTo = 'AW-17768304312/j-SLCO2goMsbELidy5hC'; // اتركها كما في حساب Google Ads
-
-  function goUrl() {
-    window.location.href = url;
-  }
-
-  function reportAndGo(e) {
-    if (e && e.preventDefault) e.preventDefault();
-    console.log('download-btn clicked — start sending conversion');
-
-    if (typeof gtag !== 'function') {
-      console.warn('gtag not found — redirecting immediately');
-      goUrl();
-      return;
-    }
-
-    var called = false;
-    var callback = function(){
-      if (called) return;
-      called = true;
-      console.log('conversion callback fired — redirecting');
-      goUrl();
-    };
-
-    try {
-      gtag('event', 'conversion', {
-        'send_to': sendTo,
-        'event_callback': callback
-      });
-      // fallback: لو لم يستجب callback خلال 1500ms افتح الرابط
-      setTimeout(callback, 1500);
-    } catch (err) {
-      console.error('gtag send error', err);
-      goUrl();
-    }
-  }
-
-  btn.addEventListener('click', reportAndGo, false);
-  btn.addEventListener('keypress', function(e){
-    var key = e.key || e.keyCode;
-    if (key === 'Enter' || key === ' ' || key === 13 || key === 32) {
-      reportAndGo(e);
-    }
-  }, false);
-})();
-</script>
-<!-- END -->
-
-
-        </div>
-
-        <div class="meta" style="margin-top:14px">
-          <span class="small">متوفر على Google Play</span> ·
-          <span class="small">اتصل: <a href="mailto:contact@khedmadz.app.com">contact@khedmadz.app.com</a></span>
-        </div>
-
-        <div class="features" style="margin-top:18px">
-          <div class="card">
-            <h3>نشر سريع</h3>
-            <p>أنشئ إعلان عمل خلال دقائق واستقبل الطلبات مباشرة.</p>
-          </div>
-          <div class="card">
-            <h3>فلترة حسب الولاية</h3>
-            <p>ابحث حسب الولاية أو المدينة أو نوع العقد.</p>
-          </div>
-          <div class="card">
-            <h3>إدارة المتقدمين</h3>
-            <p>مراسلة ومتابعة المتقدمين من داخل التطبيق.</p>
-          </div>
-        </div>
-
+    <div class="header-actions">
+      <div class="lang-switch">
+        <a href="index.html" class="active">AR</a>
+        <a href="fr/index.html">FR</a>
+        <a href="en/index.html">EN</a>
       </div>
+      <a href="#download" class="btn btn-primary js-download-btn">تحميل التطبيق</a>
+    </div>
 
-      <!-- Screenshots grid (single copy only) -->
-      <aside class="screenshots center" aria-label="App screenshots" style="padding-left:12px">
-        <h3 style="margin-bottom:8px">نظرة داخل التطبيق</h3>
-
-        <div class="app-screenshots-grid" role="list">
-
-          <figure class="shot" role="listitem">
-            <div style="padding:16px;border-radius:18px;background:#fff;box-shadow:0 18px 40px rgba(0,0,0,0.08);">
-              <img src="screenshot1.png" alt="قائمة الوظائف">
-            </div>
-            <figcaption style="margin-top:10px;font-size:14px;color:#777">قائمة الوظائف</figcaption>
-          </figure>
-
-          <figure class="shot" role="listitem">
-            <div style="padding:16px;border-radius:18px;background:#fff;box-shadow:0 18px 40px rgba(0,0,0,0.08);">
-              <img src="screenshot2.png" alt="الصفحة الرئيسية">
-            </div>
-            <figcaption style="margin-top:10px;font-size:14px;color:#777">الصفحة الرئيسية</figcaption>
-          </figure>
-
-          <figure class="shot" role="listitem">
-            <div style="padding:16px;border-radius:18px;background:#fff;box-shadow:0 18px 40px rgba(0,0,0,0.08);">
-              <img src="screenshot3.png" alt="نشر إعلان">
-            </div>
-            <figcaption style="margin-top:10px;font-size:14px;color:#777">نشر إعلان</figcaption>
-          </figure>
-
-        </div>
-
-        <div style="margin-top:8px;text-align:center;color:#999;font-size:13px">اسحب الأفقي على الهاتف للعرض ⇆</div>
-      </aside>
-    </section>
-
-    <!-- For Employers -->
-    <section class="section" aria-labelledby="for-employers">
-      <div class="container">
-        <h2 id="for-employers" class="center">لأصحاب العمل</h2>
-        <p class="center small">نوفر لك أدوات سريعة لنشر عروضك والوصول لمرشحين حقيقيين.</p>
-
-        <div class="employer-boxes" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:14px">
-          <div class="card">
-            <h3>نشر فعال</h3>
-            <p>إنشاء إعلان واضح مع متطلبات العمل والموقع.</p>
-          </div>
-          <div class="card">
-            <h3>تسويق محلي</h3>
-            <p>وصول للمرشحين داخل الولايات المحددة.</p>
-          </div>
-          <div class="card">
-            <h3>متابعة الأداء</h3>
-            <p>عرض الطلبات وفرز المرشحين بسرعة.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Blog + Resources -->
-    <section class="section" aria-labelledby="blog">
-      <div class="container">
-        <h2 id="blog" class="center">مقالات ونصائح</h2>
-        <div class="blog-list center">
-          <p class="small">مقالات قصيرة تساعدك على كتابة إعلان جيد وإيجاد الموظفين.</p>
-          <ul style="list-style: none;padding:0;margin:12px 0;">
-            <li><a href="article1.html">— كيف تكتب سيرة ذاتية احترافية</a></li>
-            <li><a href="article2.html">— أفضل طرق البحث عن عمل في الجزائر</a></li>
-            <li><a href="article3.html">— نصائح لنشر إعلان يجذب مرشحين</a></li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer" role="contentinfo">
-      <div class="container">
-        <div class="row" style="display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;align-items:center">
-          <div class="contacts">
-            <strong>تواصل معنا</strong><br>
-            <a href="mailto:contact@khedmadz.app.com">contact@khedmadz.app.com</a> ·
-            <a href="mailto:support@khedmadz.app.com">support@khedmadz.app.com</a> ·
-            <a href="mailto:info@khedmadz.app.com">info@khedmadz.app.com</a>
-          </div>
-
-          <div class="socials small">
-            <strong>تابعنا</strong><br>
-            <a href="https://www.facebook.com/share/175tyBWDvn/" target="_blank" rel="noopener">Facebook</a> ·
-            <a href="https://www.instagram.com/khedma__dz?igsh=eTI5cHZ6dWFmMDhi" target="_blank" rel="noopener">Instagram</a> ·
-            <a href="https://www.tiktok.com/@khedma__dz?_r=1&_t=ZS-91qhSVc4nA1" target="_blank" rel="noopener">TikTok</a>
-          </div>
-        </div>
-
-        <p class="center small" style="margin-top:14px">© 2025 KhedmaDZ — جميع الحقوق محفوظة</p>
-      </div>
-    </footer>
-
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="nav-toggle-label"><span></span><span></span><span></span></label>
   </div>
-</body>
-</html>
+
+  <nav class="main-nav-mobile">
+    <a href="#features">المميزات</a>
+    <a href="#how-it-works">كيف يعمل؟</a>
+    <a href="#job-seekers">للباحثين عن عمل</a>
+    <a href="#employers">لأصحاب العمل</a>
+    <a href="blog.html">مقالات</a>
+    <a href="about.html">عنّا</a>
+    <div class="lang-switch">
+      <a href="index.html" class="active">AR</a>
+      <a href="fr/index.html">FR</a>
+      <a href="en/index.html">EN</a>
+    </div>
+  </nav>
+</header>
+
+<!-- ===================== Hero ===================== -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <span class="badge">منصة التوظيف الجزائرية الأولى</span>
+      <h1>فرص العمل وأفضل الكفاءات <span>في مكان واحد</span></h1>
+      <p class="hero-lead">
+        يربطك تطبيق KhedmaDZ بأصحاب العمل والباحثين عن وظائف في مختلف
+        المجالات والولايات الجزائرية. ابحث حسب التخصص والولاية، أو انشر
+        عرض توظيف وتواصل مباشرة بنقرة واحدة عبر واتساب أو البريد الإلكتروني.
+      </p>
+
+      <div class="hero-actions">
+        <a id="download-btn" class="btn btn-primary js-download-btn" role="button" tabindex="0">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M5 20h14v-2H5v2zm7-18L5.33 9h3.84v4h6.66V9h3.84L12 2z"/></svg>
+          تحميل من Google Play
+        </a>
+        <a href="#how-it-works" class="btn btn-outline">كيف يعمل التطبيق؟</a>
+      </div>
+
+      <div class="hero-note">
+        <b>مجاني بالكامل</b> · متوفر حالياً لأجهزة Android
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat"><b>+48</b><span>ولاية جزائرية</span></div>
+        <div class="stat"><b>مختلف</b><span>المجالات والتخصصات</span></div>
+        <div class="stat"><b>نقرة واحدة</b><span>للتواصل المباشر</span></div>
+      </div>
+    </div>
+
+    <div class="hero-media">
+      <div class="float-card c1">🔍 بحث حسب الولاية</div>
+      <div class="float-card c2">💬 تواصل عبر واتساب</div>
+      <div class="phone-frame">
+        <img src="screenshot2.png" alt="الصفحة الرئيسية لتطبيق KhedmaDZ">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== Features ===================== -->
+<section id="features" class="section">
+  <div class="container">
+    <div class="eyebrow">
+      <span class="badge">لماذا KhedmaDZ؟</span>
+      <h2>كل ما تحتاجه للتوظيف والبحث عن عمل</h2>
+      <p>تجربة سهلة وسريعة تجمع الباحثين عن عمل وأصحاب العمل في تطبيق واحد.</p>
+    </div>
+
+    <div class="grid-3">
+      <div class="card">
+        <div class="icon">🎯</div>
+        <h3>بحث حسب التخصص</h3>
+        <p>اعثر على الوظائف التي تناسب مهاراتك وخبرتك في مختلف المجالات.</p>
+      </div>
+      <div class="card">
+        <div class="icon">📍</div>
+        <h3>بحث حسب الولاية</h3>
+        <p>اكتشف فرص العمل القريبة منك في أي ولاية جزائرية.</p>
+      </div>
+      <div class="card">
+        <div class="icon">📢</div>
+        <h3>نشر إعلانات التوظيف</h3>
+        <p>يمكن لأصحاب العمل نشر عروضهم والوصول إلى مرشحين حقيقيين.</p>
+      </div>
+      <div class="card">
+        <div class="icon">💬</div>
+        <h3>تواصل مباشر</h3>
+        <p>تواصل عبر واتساب أو البريد الإلكتروني بنقرة واحدة، بدون وسيط.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🗂️</div>
+        <h3>مختلف المجالات</h3>
+        <p>تجارة، خدمات، إدارة، تقنية، بناء، تعليم، صحة وغيرها الكثير.</p>
+      </div>
+      <div class="card">
+        <div class="icon">⚡</div>
+        <h3>سهولة الاستخدام</h3>
+        <p>واجهة بسيطة تساعدك على الوصول إلى ما تحتاجه بسرعة.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== How it works ===================== -->
+<section id="how-it-works" class="section section-alt">
+  <div class="container">
+    <div class="eyebrow">
+      <span class="badge">كيف يعمل التطبيق؟</span>
+      <h2>ابدأ خلال دقائق</h2>
+    </div>
+
+    <div class="grid-2" style="margin-bottom:20px">
+      <div>
+        <h3 style="text-align:center;margin-bottom:20px">للباحثين عن عمل</h3>
+        <div class="steps" style="grid-template-columns:1fr">
+          <div class="step"><div class="num">1</div><h4>حمّل التطبيق</h4><p>حمّل KhedmaDZ من Google Play مجاناً.</p></div>
+          <div class="step"><div class="num">2</div><h4>اختر التخصص والولاية</h4><p>حدد المجال والمنطقة التي تبحث فيها.</p></div>
+          <div class="step"><div class="num">3</div><h4>تصفح العروض</h4><p>اطلع على تفاصيل كل فرصة عمل متاحة.</p></div>
+          <div class="step"><div class="num">4</div><h4>تواصل مباشرة</h4><p>راسل صاحب العمل عبر واتساب أو البريد.</p></div>
+        </div>
+      </div>
+
+      <div>
+        <h3 style="text-align:center;margin-bottom:20px">لأصحاب العمل</h3>
+        <div class="steps" style="grid-template-columns:1fr">
+          <div class="step"><div class="num">1</div><h4>حمّل التطبيق</h4><p>حمّل KhedmaDZ من Google Play مجاناً.</p></div>
+          <div class="step"><div class="num">2</div><h4>أنشئ إعلانك</h4><p>أضف تفاصيل الوظيفة والمجال والولاية.</p></div>
+          <div class="step"><div class="num">3</div><h4>انشر العرض</h4><p>يظهر إعلانك للباحثين المناسبين.</p></div>
+          <div class="step"><div class="num">4</div><h4>استقبل المرشحين</h4><p>تواصل مع المهتمين بنقرة واحدة.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== Job seekers ===================== -->
+<section id="job-seekers" class="section">
+  <div class="container split">
+    <div class="split-copy">
+      <span class="badge">للباحثين عن عمل</span>
+      <h2>اكتشف فرصتك القادمة بسهولة</h2>
+      <p>تصفح عروض العمل في مختلف المجالات، وابحث حسب التخصص والولاية، ثم تواصل مباشرة مع صاحب العمل.</p>
+      <ul class="check-list">
+        <li>آلاف الفرص في مختلف الولايات والمجالات</li>
+        <li>فلترة سريعة حسب التخصص والمنطقة</li>
+        <li>تواصل مباشر عبر واتساب أو البريد الإلكتروني</li>
+        <li>لا حاجة لوسيط بينك وبين صاحب العمل</li>
+      </ul>
+      <a class="btn btn-primary js-download-btn" role="button" tabindex="0">حمّل التطبيق وابدأ البحث</a>
+    </div>
+    <div class="split-media">
+      <img src="screenshot1.png" alt="قائمة عروض العمل في تطبيق KhedmaDZ">
+    </div>
+  </div>
+</section>
+
+<!-- ===================== Employers ===================== -->
+<section id="employers" class="section section-alt">
+  <div class="container split reverse">
+    <div class="split-media">
+      <img src="screenshot3.png" alt="نشر إعلان توظيف في تطبيق KhedmaDZ">
+    </div>
+    <div class="split-copy">
+      <span class="badge">لأصحاب العمل</span>
+      <h2>اعثر على الكفاءات المناسبة لفريقك</h2>
+      <p>انشر إعلان التوظيف الخاص بك بسهولة، وحدد المجال والتخصص والولاية، ثم تواصل مباشرة مع المهتمين.</p>
+      <ul class="check-list">
+        <li>نشر إعلان واضح خلال دقائق</li>
+        <li>وصول للمرشحين داخل الولايات المحددة</li>
+        <li>استقبال طلبات المهتمين مباشرة</li>
+        <li>تواصل بنقرة واحدة عبر واتساب أو البريد</li>
+      </ul>
+      <a class="btn btn-primary js-download-btn" role="button" tabindex="0">حمّل التطبيق وانشر عرضك</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== Screenshots ===================== -->
+<section class="section">
+  <div class="container">
+    <div class="eyebrow">
+      <span class="badge">نظرة داخل التطبيق</span>
+      <h2>كل ما تحتاجه في تطبيق واحد</h2>
+    </div>
+
+    <div class="screens-wrap">
+      <figure class="shot">
+        <div class="shot-frame"><img src="screenshot2.png" alt="الصفحة الرئيسية"></div>
+        <figcaption>الصفحة الرئيسية</figcaption>
+      </figure>
+      <figure class="shot">
+        <div class="shot-frame"><img src="screenshot1.png" alt="قائمة الوظائف"></div>
+        <figcaption>قائمة الوظائف</figcaption>
+      </figure>
+      <figure class="shot">
+        <div class="shot-frame"><img src="screenshot3.png" alt="نشر إعلان"></div>
+        <figcaption>نشر إعلان توظيف</figcaption>
+      </figure>
+    </div>
+    <p class="center small">اسحب أفقياً للعرض ⇆</p>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section class="section section-alt">
+  <div class="container" style="max-width:760px">
+    <div class="eyebrow">
+      <span class="badge">الأسئلة الشائعة</span>
+      <h2>هل لديك سؤال؟</h2>
+    </div>
+
+    <details class="faq-item" open>
+      <summary>هل التطبيق مجاني؟</summary>
+      <p>نعم، تحميل واستخدام KhedmaDZ مجاني بالكامل.</p>
+    </details>
+    <details class="faq-item">
+      <summary>على أي أجهزة يعمل التطبيق؟</summary>
+      <p>KhedmaDZ متوفر حالياً لأجهزة Android فقط عبر Google Play.</p>
+    </details>
+    <details class="faq-item">
+      <summary>كيف يتم التواصل بين الطرفين؟</summary>
+      <p>يتم التواصل مباشرة عبر واتساب أو البريد الإلكتروني بنقرة واحدة، دون وسيط.</p>
+    </details>
+    <details class="faq-item">
+      <summary>هل يمكنني نشر إعلان توظيف مجاناً؟</summary>
+      <p>نعم، يمكن لأصحاب العمل نشر إعلاناتهم من خلال التطبيق مباشرة.</p>
+    </details>
+  </div>
+</section>
+
+<!-- ===================== Final CTA ===================== -->
+<section id="download" class="section">
+  <div class="container">
+    <div class="cta-band">
+      <h2>ابدأ رحلتك مع KhedmaDZ اليوم</h2>
+      <p>حمّل التطبيق مجاناً وابحث عن فرصتك، أو انشر عرض التوظيف الخاص بك الآن.</p>
+      <a class="btn btn-primary js-download-btn" role="button" tabindex="0">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M5 20h14v-2H5v2zm7-18L5.33 9h3.84v4h6.66V9h3.84L12 2z"/></svg>
+        تحميل من Google Play
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== Footer ===================== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col footer-brand">
+        <div class="brand">
+          <img class="logo" src="design.dz.png" alt="KhedmaDZ" style="height:40px;width:40px">
+          <div class="brand-text"><div class="title">KhedmaDZ</div></div>
+        </div>
+        <p>تطبيق جزائري يربط أصحاب العمل بالباحثين عن وظائف في مختلف المجالات والولايات.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>روابط سريعة</h4>
+        <ul>
+          <li><a href="#features">المميزات</a></li>
+          <li><a href="#how-it-works">كيف يعمل؟</a></li>
+          <li><a href="blog.html">مقالات</a></li>
+          <li><a href="about.html">عنّا</a></li>
+        </ul>
+      </div>
+
+      <div 
