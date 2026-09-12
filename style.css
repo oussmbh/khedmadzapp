@@ -1092,3 +1092,189 @@ ul{ margin:0; padding:0; list-style:none }
   .float-card.c1{ inset-inline-end:-2%; }
   .float-card.c2{ inset-inline-start:-2%; }
 }
+
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>شروط الاستخدام | KhedmaDZ</title>
+<meta name="description" content="شروط الاستخدام لتطبيق KhedmaDZ — القواعد والأحكام التي تنظم استخدام التطبيق.">
+<link rel="canonical" href="https://khedmadzapp.com/terms.html">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="brand">
+      <img class="logo" src="design.dz.png" alt="KhedmaDZ">
+      <div class="brand-text">
+        <div class="title">KhedmaDZ</div>
+        <div class="tag">Your opportunity starts here</div>
+      </div>
+    </a>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="blog.html">مقالات</a></li>
+        <li><a href="about.html">عنّا</a></li>
+        <li><a href="privacy.html">الخصوصية</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <a class="btn btn-primary js-download-btn" role="button" tabindex="0">تحميل التطبيق</a>
+    </div>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="nav-toggle-label"><span></span><span></span><span></span></label>
+  </div>
+  <nav class="main-nav-mobile">
+    <a href="index.html">الرئيسية</a>
+    <a href="blog.html">مقالات</a>
+    <a href="about.html">عنّا</a>
+    <a href="privacy.html">الخصوصية</a>
+  </nav>
+</header>
+
+<main>
+  <div class="container article-page">
+
+    <div style="margin-bottom:20px">
+      <span class="badge badge-outline">📋 الشروط والأحكام</span>
+    </div>
+
+    <h1 data-reveal>شروط الاستخدام</h1>
+    <p data-reveal style="color:var(--muted);font-size:14px">
+      آخر تحديث: يناير 2025
+    </p>
+
+    <p data-reveal>
+      باستخدامك لتطبيق KhedmaDZ، فإنك توافق على الالتزام بهذه الشروط والأحكام.
+      يُرجى قراءتها بعناية قبل استخدام التطبيق.
+    </p>
+
+    <h3 data-reveal>1. قبول الشروط</h3>
+    <p data-reveal>
+      استخدامك للتطبيق يعني موافقتك على هذه الشروط. إذا كنت لا توافق على أي
+      بند من هذه الشروط، يُرجى عدم استخدام التطبيق.
+    </p>
+
+    <h3 data-reveal>2. استخدام التطبيق</h3>
+    <ul data-reveal>
+      <li>يجب استخدام التطبيق للأغراض المشروعة فقط</li>
+      <li>لا يُسمح بنشر محتوى مزيف أو مضلل أو غير لائق</li>
+      <li>لا يُسمح بنشر إعلانات توظيف وهمية أو غير حقيقية</li>
+      <li>يجب أن تكون المعلومات التي تقدمها صحيحة ودقيقة</li>
+    </ul>
+
+    <h3 data-reveal>3. مسؤولية المستخدم</h3>
+    <p data-reveal>
+      المستخدمون مسؤولون مسؤولية كاملة عن صحة المحتوى الذي ينشرونه،
+      سواء كان إعلانات توظيف أو أي معلومات أخرى. KhedmaDZ ليس مسؤولاً
+      عن أي ضرر ناتج عن المحتوى المنشور من قبل المستخدمين.
+    </p>
+
+    <h3 data-reveal>4. التواصل المباشر</h3>
+    <p data-reveal>
+      يوفر KhedmaDZ وسيلة للتواصل بين أصحاب العمل والباحثين عن وظائف.
+      التطبيق غير مسؤول عن أي اتفاقيات أو عقود تُبرم بين المستخدمين.
+    </p>
+
+    <h3 data-reveal>5. الملكية الفكرية</h3>
+    <p data-reveal>
+      جميع حقوق الملكية الفكرية المتعلقة بتطبيق KhedmaDZ، بما في ذلك
+      الشعار والتصميم والكود، محفوظة لشركة KhedmaDZ.
+    </p>
+
+    <h3 data-reveal>6. تعليق الحسابات</h3>
+    <p data-reveal>
+      نحتفظ بحق تعليق أو حذف أي حساب أو إعلان يخالف هذه الشروط،
+      وذلك دون إشعار مسبق.
+    </p>
+
+    <h3 data-reveal>7. تعديل الشروط</h3>
+    <p data-reveal>
+      يحق لنا تعديل هذه الشروط في أي وقت. سيتم إشعارك بالتغييرات الجوهرية
+      عبر التطبيق. استمرارك في استخدام التطبيق بعد التعديل يعني موافقتك
+      على الشروط الجديدة.
+    </p>
+
+    <h3 data-reveal>8. التواصل</h3>
+    <p data-reveal>
+      لأي استفسار حول هذه الشروط، تواصل معنا على:
+    </p>
+    <p data-reveal>
+      📧 <a href="mailto:support@khedmadz.app.com">support@khedmadz.app.com</a>
+    </p>
+
+    <a href="index.html" class="back-link" data-reveal>← العودة إلى الرئيسية</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col footer-brand">
+        <div class="brand">
+          <img class="logo" src="design.dz.png" alt="KhedmaDZ" style="height:38px;width:38px">
+          <div class="brand-text"><div class="title">KhedmaDZ</div></div>
+        </div>
+        <p>تطبيق جزائري يربط أصحاب العمل بالباحثين عن وظائف.</p>
+        <div class="social-row">
+          <a href="https://www.facebook.com/share/175tyBWDvn/" target="_blank" rel="noopener">📘</a>
+          <a href="https://www.instagram.com/khedma__dz" target="_blank" rel="noopener">📷</a>
+          <a href="https://www.tiktok.com/@khedma__dz" target="_blank" rel="noopener">🎵</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>روابط سريعة</h4>
+        <ul>
+          <li><a href="index.html">الرئيسية</a></li>
+          <li><a href="blog.html">مقالات</a></li>
+          <li><a href="about.html">عنّا</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>قانوني</h4>
+        <ul>
+          <li><a href="privacy.html">سياسة الخصوصية</a></li>
+          <li><a href="terms.html">شروط الاستخدام</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>تواصل معنا</h4>
+        <ul>
+          <li><a href="mailto:support@khedmadz.app.com">support@khedmadz.app.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 KhedmaDZ — جميع الحقوق محفوظة</span>
+      <span>صُنع بحب في الجزائر 🇩🇿</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var url='https://play.google.com/store/apps/details?id=com.khedmadz.app';
+  function goUrl(){window.location.href=url;}
+  document.querySelectorAll('.js-download-btn').forEach(function(btn){
+    btn.addEventListener('click',goUrl,false);
+  });
+  var obs=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(en.isIntersecting){en.target.classList.add('in-view');obs.unobserve(en.target);}
+    });
+  },{threshold:0.14});
+  document.querySelectorAll('[data-reveal]').forEach(function(el){obs.observe(el);});
+  document.querySelectorAll('.main-nav-mobile a').forEach(function(link){
+    link.addEventListener('click',function(){
+      var t=document.getElementById('nav-toggle');if(t)t.checked=false;
+    });
+  });
+})();
+</script>
+</body>
+</html>
